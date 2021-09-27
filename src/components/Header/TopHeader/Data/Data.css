@@ -1,0 +1,46 @@
+.data{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 11px;
+    margin-left: 18px;
+}
+
+.phone, .address, .working-time{
+    position: relative;
+    margin-right: 46px;
+}
+
+.data div:last-child{
+    margin-right: 0;
+}
+
+.phone::before{
+    content: '';
+    position: absolute;
+    background-image: url("./../../../../icons/Header/TopHeader/Data/phone.svg");
+    width: 11px;
+    height: 11px;
+    left: -15px;
+    background-repeat: no-repeat;
+}
+
+.address::before{
+    content: '';
+    position: absolute;
+    background-image: url("./../../../../icons/Header/TopHeader/Data/address.svg");
+    width: 11px;
+    height: 11px;
+    left: -15px;
+    background-repeat: no-repeat;
+}
+
+.working-time::before{
+    content: '';
+    position: absolute;
+    background-image: url("./../../../../icons/Header/TopHeader/Data/time.svg");
+    width: 11px;
+    height: 11px;
+    left: -15px;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,14 @@
+.socials__links ul{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+
+.socials__links li{
+    list-style-type: none;
+    margin-right: 12px;
+}
+
+.socials__links li:last-child{
+    margin-right: 0;
+}

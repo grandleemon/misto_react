@@ -1,0 +1,28 @@
+.background{
+    background-color: #121212;
+}
+
+
+
+.top__header{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    min-height: 24px;
+    opacity: 0.8;
+}
+
+.main__header-background{
+    border-bottom: 1px solid #F8F8F8;
+    box-shadow: 0px 2px 2px #F8F8F8;
+    transition: .5s;
+}
+
+.main__header-background:hover{
+    border-color: #121212;
+    transition: .5s;
+}
+
+
+
