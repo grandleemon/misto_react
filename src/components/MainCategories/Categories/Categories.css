@@ -10,19 +10,65 @@
 .women__category{
     width: 370px;
     height: 350px;
-    background-image: url("./../../../images/women.jpg");
+    background-image: url("./../../../images/Header/MainCategories/Categories/women.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: height 0.3s, width 0.3s;
+    position:relative;
+}
+
+.women__category::before, .men__category::before, .accessories__category::before{
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 2px solid transparent;
+    transition: height 0.3s , width 0.3s ;
+}
+
+.women__category::after, .men__category::after, .accessories__category::after{
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 2px solid transparent;
+    transition: height 0.3s, width 0.3s;
+}
+
+.women__category:hover::after, .men__category:hover::after, .accessories__category:hover::after{
+    height: 100%;
+    width: 100%;
+    border: 2px solid #121212;
+    border-left: none;
+    border-top: none;
+    transition: height 0.3s linear,
+    width 0.3s linear;
+}
+
+.women__category:hover::before, .men__category:hover::before, .accessories__category:hover::before{
+    height: 100%;
+    width: 100%;
+    border: 2px solid #121212;
+    border-right: none;
+    border-bottom: none;
+    transition: height 0.3s linear,
+                width 0.3s linear;
 }
 
 .men__category{
     width: 355px;
     height: 350px;
-    background-image: url("./../../../images/men.jpg");
+    background-image: url("./../../../images/Header/MainCategories/Categories/men.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -30,12 +76,13 @@
     align-items: center;
     background-position-y: -10px;
     cursor: pointer;
+    position: relative;
 }
 
 .accessories__category{
     width: 738px;
     height: 360px;
-    background-image: url("./../../../images/accessories.jpg");
+    background-image: url("./../../../images/Header/MainCategories/Categories/accessories.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -44,6 +91,7 @@
     -ms-background-position-y: -150px;
     background-position-y: -150px;
     cursor: pointer;
+    position: relative;
 }
 .women__category-title, .men__category-title, .accessories__category-title{
     background-color: #fff;

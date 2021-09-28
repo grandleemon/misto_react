@@ -1,0 +1,92 @@
+.special__offersBackground{
+    min-height: 580px;
+    background: linear-gradient(180deg, #F3F2F2 0%, #DCDBDB 100%);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.special__offersBackground::before{
+    position: absolute;
+    content: '';
+    background-image: url("./../../images/SpecialOffers/woman.png");
+    width: 323px;
+    height: 575px;
+    bottom: -4%;
+    left: 21%;
+}
+
+.special__offersBackground::after{
+    position: absolute;
+    content: '';
+    background-image: url("./../../images/SpecialOffers/man.png");
+    width: 219px;
+    height: 524px;
+    bottom: 5%;
+    right: 21%;
+}
+
+
+.special__offers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer{
+    padding: 80px 96px 96px 96px;
+    background-color: #fff;
+    text-align: center;
+
+}
+
+.offer__type{
+    color: #121212;
+    opacity: 0.6;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.offer__content{
+    margin-top: 16px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #121212;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 36px;
+}
+
+.subscribing__form input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 340px;
+    margin-top: 32px;
+    background-color: #e0e0e0;
+    padding: 23px 100px;
+    color: #121212;
+    opacity: 0.4;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+}
+
+.subscribing__form button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 340px;
+    margin-top: 24px;
+    padding: 23px 100px;
+    background: #121212;
+    border: 2px solid #121212;
+    color: white;
+    opacity: 0.9;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+}

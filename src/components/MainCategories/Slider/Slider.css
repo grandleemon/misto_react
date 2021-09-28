@@ -1,0 +1,51 @@
+.bestsellers{
+    background-image: url("./../../../images/Header/MainCategories/Categories/slider.jpg");
+    background-size: cover;
+    width: 48%;
+    height: 720px;
+    background-position-y: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px 0 24px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+
+.slider__item-content{
+    padding: 24px 32px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.arrow{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.slider__item-type{
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #121212;
+    opacity: 0.4;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.slider__item-title{
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #121212;
+    font-weight: 600;
+}

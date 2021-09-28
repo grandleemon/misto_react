@@ -1,0 +1,7 @@
+.shopping__cards{
+    padding-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+

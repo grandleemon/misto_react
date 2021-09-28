@@ -1,0 +1,63 @@
+.advantages{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 32px;
+    padding-left: 37px;
+    padding-bottom: 30px;
+}
+
+.advantages__background{
+    border-bottom: 1px solid #F8F8F8;
+    box-shadow: 0 3px 3px #F8F8F8;
+}
+
+.shipping, .return, .support{
+    position: relative;
+}
+
+.shipping::before{
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 26px;
+    background-image: url("./../../../icons/MainCategories/Advantages/truck.svg");
+    left: -37px;
+    background-repeat: no-repeat;
+}
+
+.return::before{
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 29px;
+    background-image: url("./../../../icons/MainCategories/Advantages/return.svg");
+    left: -37px;
+    background-repeat: no-repeat;
+}
+
+.support::before{
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-image: url("./../../../icons/MainCategories/Advantages/support.svg");
+    left: -37px;
+    background-repeat: no-repeat;
+}
+
+.shipping__title, .return__title, .support__title{
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #121212;
+}
+
+.shipping__content, .return__content, .support__content{
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 4px;
+    color: #121212;
+    opacity: 0.9;
+}

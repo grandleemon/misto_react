@@ -1,24 +1,22 @@
 import React from 'react';
 import './MainCategories.css'
 import Categories from "./Categories/Categories";
+import Slider from "./Slider/Slider";
+import Advantages from "./Advantages/Advantages";
+
 const MainCategories = () => {
     return (
-        <div className="wrapper">
-            <div className="main__categories">
-                <div className="slider">
-                    <div className="arrow arrow-left">&#60;</div>
-                    <div className="slider__item-content">
-                        <div className="slider__item-type">BANNER</div>
-                        <div className="slider__item-title">your Title text </div>
-                    </div>
-                    <div className="arrow arrow-right">&#62;</div>
+        <div className="advantages__background">
+            <div className="wrapper">
+                <div className="main__categories">
+                    <Slider/>
+                    <Categories/>
                 </div>
-                <Categories />
-            </div>
-            <div className="advantages">
-
+                <Advantages/>
             </div>
         </div>
+
+
     );
 };
 

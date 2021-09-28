@@ -1,7 +1,7 @@
 import React from 'react';
 import './MainHeader.css'
 import search_icon from './../../../icons/Header/MainHeader/search.svg'
-import planet_icon from './../../../icons/Header/MainHeader/globe.svg'
+import localization_icon from './../../../icons/Header/MainHeader/globe.svg'
 import user_icon from './../../../icons/Header/MainHeader/user.svg'
 import cart_icon from './../../../icons/Header/MainHeader/cart.svg'
 
@@ -47,7 +47,7 @@ const MainHeader = () => {
                     </div>
                     <div>
                         <a href="#">
-                            <img src={planet_icon} alt=""/>
+                            <img src={localization_icon} alt=""/>
                         </a>
                     </div>
                     <div>

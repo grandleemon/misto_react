@@ -1,0 +1,59 @@
+.news{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.news__item{
+    margin-bottom: 40px;
+}
+
+.new__season{
+    width: 540px;
+    height: 260px;
+    background-image: url("./../../images/NewsSection/new collection.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sale{
+    width: 540px;
+    height: 260px;
+    background-image: url("./../../images/NewsSection/sale.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.content{
+    background-color: #fff;
+    padding: 16px 24px;
+    text-align: center;
+}
+
+.content__type{
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #121212;
+    opacity: 0.6;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.content__title{
+    color: #121212;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+.content__title span{
+    color: #E91E63;
+}
