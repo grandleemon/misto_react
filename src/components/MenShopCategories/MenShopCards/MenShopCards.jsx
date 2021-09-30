@@ -11,11 +11,11 @@ const MenShopCards = () => {
     return (
         <div>
             <div className="shopping__cards">
-                <Card card1Image={card1Image} card1Title={"Striped Sweatshirt"} card1Price={"$ 38.00"}/>
-                <Card card1Image={card2Image} card1Title={"Men pants"} card1Price={"$ 30.00"}/>
-                <Card card1Image={card3Image} card1Title={"Men Knit Sweater"} card1Price={"$ 54.00"}/>
-                <Card card1Image={card4Image} card1Title={"Dusk Pom Beanie"} card1Price={"$ 180.00"}/>
-                <Card card1Image={card5Image} card1Title={"Leather White Trainers"} card1Price={"$ 45.00"}/>
+                <Card cardImage={card1Image} cardTitle={"Striped Sweatshirt"} cardPrice={"$ 38.00"}/>
+                <Card cardImage={card2Image} cardTitle={"Men pants"} cardPrice={"$ 30.00"}/>
+                <Card cardImage={card3Image} cardTitle={"Men Knit Sweater"} cardPrice={"$ 54.00"}/>
+                <Card cardImage={card4Image} cardTitle={"Dusk Pom Beanie"} cardPrice={"$ 180.00"}/>
+                <Card cardImage={card5Image} cardTitle={"Leather White Trainers"} cardPrice={"$ 45.00"}/>
             </div>
             <Button />
         </div>

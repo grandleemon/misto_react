@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    box-shadow: 0 10px 10px #F8F8F8;
 }
 
 .special__offersBackground::before{
@@ -85,6 +86,7 @@
     border: 2px solid #121212;
     color: white;
     opacity: 0.9;
+    cursor: pointer;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     font-weight: 500;

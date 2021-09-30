@@ -6,6 +6,10 @@ import WomenShopSection from "./components/WomenShopSection/WomenShopSection";
 import MenShopCategories from "./components/MenShopCategories/MenShopCategories";
 import News from "./components/NewsSection/News";
 import SpecialOffers from "./components/SpecialOffers/SpecialOffers";
+import Blog from "./components/Blog/Blog";
+import Feedback from "./components/Feedback/Feedback";
+
+
 
 function App() {
   return (
@@ -16,6 +20,8 @@ function App() {
         <MenShopCategories />
         <News />
         <SpecialOffers />
+        <Blog />
+        <Feedback />
     </div>
   );
 }
