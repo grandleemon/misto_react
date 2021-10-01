@@ -8,6 +8,7 @@ import News from "./components/NewsSection/News";
 import SpecialOffers from "./components/SpecialOffers/SpecialOffers";
 import Blog from "./components/Blog/Blog";
 import Feedback from "./components/Feedback/Feedback";
+import Footer from "./components/Footer/Footer";
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <SpecialOffers />
         <Blog />
         <Feedback />
+        <Footer />
     </div>
   );
 }
