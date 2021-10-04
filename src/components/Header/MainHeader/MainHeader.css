@@ -49,3 +49,7 @@
 .header__buttons div{
     margin-right: 27px;
 }
+
+.dropdown__menu-trigger:hover .dropdown__menu{
+    display: block;
+}

@@ -5,6 +5,7 @@ import localization_icon from './../../../icons/Header/MainHeader/globe.svg'
 import user_icon from './../../../icons/Header/MainHeader/user.svg'
 import cart_icon from './../../../icons/Header/MainHeader/cart.svg'
 
+
 const MainHeader = () => {
     return (
         <div>
@@ -19,7 +20,7 @@ const MainHeader = () => {
                                 <a href="#">About Us</a>
                             </li>
                             <li>
-                                <a href="#">Women</a>
+                                <a className="dropdown__menu-trigger" href="#">Women</a>
                             </li>
                             <li>
                                 <a href="#">Men</a>
@@ -61,6 +62,8 @@ const MainHeader = () => {
                         </a>
                     </div>
                 </div>
+
+
             </div>
         </div>
     );
