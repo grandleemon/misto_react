@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css'
 import MainHeader from "./MainHeader/MainHeader";
 import TopHeader from "./TopHeader/TopHeader";
-import DropdownMenu from "./DropdownMenu/DropdownMenu";
+
 
 const Header = () => {
     return (
@@ -15,16 +15,10 @@ const Header = () => {
                 </div>
 
                 <div className="main__header-background">
-                    <div className="wrapper">
                         <MainHeader/>
-                    </div>
                 </div>
 
-                <div className="dropdown__menu">
-                    <div className="wrapper">
-                        <DropdownMenu />
-                    </div>
-                </div>
+
 
 
             </header>

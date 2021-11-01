@@ -1,15 +1,14 @@
 import React from 'react';
-import './DropdownMenu.css'
+import './../DropdownMenu.css'
 
-
-const DropdownMenu = () => {
+const MenuMen = () => {
     return (
         <div>
             <div className="dropdown__menu-body">
                 <div className="dropdown__menu-categories">
                     <div className="tops-categories">
                         <ul>
-                            <h2>tops</h2>
+                            <h2>Men</h2>
                             <li>
                                 <a href="#">Awesome</a>
                             </li>
@@ -91,7 +90,8 @@ const DropdownMenu = () => {
                 </div>
             </div>
         </div>
+
     );
 };
 
-export default DropdownMenu;
+export default MenuMen;
