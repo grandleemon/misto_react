@@ -6,7 +6,10 @@ import user_icon from './../../../icons/Header/MainHeader/user.svg'
 import cart_icon from './../../../icons/Header/MainHeader/cart.svg'
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import MenuMen from "../DropdownMenu/DropdownMenuCategories/MenuMen";
-import Localization from "../Localization/Localization";
+import Localization from "../Modals/Localization/Localization";
+import SearchModal from "../Modals/Search/SearchModal";
+import LoginModal from "../Modals/Login/LoginModal";
+import ShoppingCart from "../Modals/ShoppingCart/ShoppingCart";
 
 
 
@@ -18,7 +21,10 @@ constructor() {
     this.state = {
         womenHovered: false,
         menHovered: false,
-        showModal: false
+        showModalLocalization: false,
+        showModalSearch: false,
+        showLoginModal: false,
+        showShoppingCartModal:false
     }
 }
 
@@ -38,13 +44,33 @@ onMouseLeaveMen = e => {
     this.setState({menHovered:false})
 }
 
-closeModal = () => {
-    this.setState({showModal: false})
+closeModalLocalization = () => {
+    this.setState({showModalLocalization: false})
 }
 
+closeModalSearch = () => {
+    this.setState({showModalSearch: false})
+}
 
-setShowModal = () => {
-    this.setState(prev => ({showModal: !prev.showModal}))
+closeLoginModal = () => {
+    this.setState({showLoginModal: false})
+}
+
+closeShoppingCartModal = () => {
+    this.setState({showShoppingCartModal: false})
+}
+
+setShowModalLocalization = () => {
+    this.setState(prev => ({showModalLocalization: !prev.showModalLocalization}))
+}
+setShowModalSearch = () => {
+    this.setState(prev => ({showModalSearch: !prev.showModalSearch}))
+}
+setShowLoginModal = () => {
+    this.setState(prev => ({showLoginModal: !prev.showLoginModal}))
+}
+setShoppingCartModal = () => {
+    this.setState(prev => ({showShoppingCartModal: !prev.showShoppingCartModal}))
 }
 
 
@@ -98,22 +124,22 @@ render(){
                     </div>
                     <div className="header__buttons">
                         <div>
-                            <a href="#">
+                            <a href="#" onClick={this.setShowModalSearch}>
                                 <img src={search_icon} alt=""/>
                             </a>
                         </div>
                         <div>
-                            <a href="#" onClick={this.setShowModal}>
+                            <a href="#" onClick={this.setShowModalLocalization}>
                                 <img src={localization_icon} alt=""/>
                             </a>
                         </div>
                         <div>
-                            <a href="#">
+                            <a href="#" onClick={this.setShowLoginModal}>
                                 <img src={user_icon} alt=""/>
                             </a>
                         </div>
                         <div>
-                            <a href="#">
+                            <a href="#" onClick={this.setShoppingCartModal}>
                                 <img src={cart_icon} alt=""/>
                             </a>
                         </div>
@@ -121,7 +147,21 @@ render(){
                 </div>
             </div>
 
-            <Localization showModal={this.state.showModal} setShowModal={this.setShowModal} closeModal={this.closeModal}/>
+            <Localization showModal={this.state.showModalLocalization}
+                          setShowModal={this.setShowModalLocalization}
+                          closeModal={this.closeModalLocalization}/>
+
+            <SearchModal showModal={this.state.showModalSearch}
+                         setShowModal={this.setShowModalSearch}
+                         closeModal={this.closeModalSearch}/>
+
+            <LoginModal showModal={this.state.showLoginModal}
+                         setShowModal={this.setShowLoginModal}
+                         closeModal={this.closeLoginModal}/>
+
+            <ShoppingCart showModal={this.state.showShoppingCartModal}
+                          setShowModal={this.setShoppingCartModal}
+                          closeModal={this.closeShoppingCartModal} />
 
             <div className="dropdown__menu" style={styleWomen} onMouseLeave={this.onMouseLeaveWomen}
             onMouseEnter={this.onMouseEnterWomen}>

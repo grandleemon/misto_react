@@ -1,0 +1,163 @@
+.login{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    height: 100%;
+    width: 400px;
+    z-index: 3;
+}
+
+.login__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121212;
+    padding: 13px 24px 13px 24px;
+}
+
+.login__title{
+    color: white;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+
+.login__close-btn::after{
+    display: inline-block;
+    transform: scale(1.5);
+    content: '\00d7';
+    color: white;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.login__body{
+    padding: 24px;
+}
+
+.login__body form label{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.login__body form .login-password{
+    margin-top: 32px;
+}
+
+.login__body form .login-password div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-password a{
+    font-size: 11px;
+    color: #121212;
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+.login__body form input[type=email], .login__body form input[type=password] {
+    font-size: 14px;
+    margin-top: 8px;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    background-color: #F8F8F8;
+}
+
+form input[type=submit]{
+    width: 100%;
+    padding: 17px;
+    background-color: #121212;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    margin-top: 39px;
+    cursor: pointer;
+    letter-spacing: 0.06em;
+}
+
+.lines{
+    display: flex;
+    margin-top: 32px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lines span{
+    font-size: 14px;
+    font-weight: 400;
+    color: #121212;
+}
+
+.lines hr{
+    width: 40%;
+    border: 1px solid #E6E6E6;
+}
+
+.login-services{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-services a{
+    margin-right: 28px;
+}
+
+.login-services a:last-child{
+    margin-left: 28px;
+}
+
+.login-services .facebook-login img{
+    width: 36px;
+    height: 36px;
+}
+
+.login-services .google-icon img {
+    width: 36px;
+    height: 36px;
+}
+
+.new-user{
+    margin-top: 100px;
+}
+
+.new-user div{
+    font-size: 14px;
+    font-weight: 400;
+    color: #121212;
+    text-align: center;
+}
+
+.new-user a{
+    display: inline-block;
+    background-color: #F8F8F8;
+    padding: 17px;
+    width: 100%;
+    margin-top: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #121212;
+    letter-spacing: 0.06em;
+    transition: .5s;
+}
+
+.new-user a:hover{
+    background-color: #121212;
+    color: white;
+    transition: .5s;
+}
+
+

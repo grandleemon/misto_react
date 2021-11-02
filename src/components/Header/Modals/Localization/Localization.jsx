@@ -1,29 +1,20 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import './Localization.css'
+import {useClickOutside} from "../../../UI/useClickOutside";
+
 
 const Localization = (props) => {
 
-    let menuRef = useRef()
-
-    useEffect(() => {
-        let handler = (e) => {
-            if(menuRef.current && !menuRef.current.contains(e.target)) {
-                props.closeModal()
-            }
-        }
-        document.addEventListener('mousedown', handler)
-
-        return() => {
-            document.removeEventListener("mousedown", handler)
-        }
+    let domNode = useClickOutside(() => {
+        props.closeModal()
     })
 
     return (
         <div>
-            {props.showModal ? <div className="localization" ref={menuRef}>
-                <div className="localization__header">
-                    <div className="localization__title">Localization</div>
-                    <div className="localization__close-btn" onClick={props.setShowModal}>
+            {props.showModal ? <div className="localization" ref={domNode}>
+                <div className="search__header">
+                    <div className="search__title">Localization</div>
+                    <div className="search__close-btn" onClick={props.setShowModal}>
                     </div>
                 </div>
 
@@ -31,7 +22,7 @@ const Localization = (props) => {
                     <div className="choose__language">
                         <h3>Language</h3>
                         <div>
-                            <input type="radio" name="language" value="English" id="English"/>
+                            <input type="radio" name="language" value="English" id="English" checked/>
                             <label htmlFor="English">English</label>
                         </div>
                         <div>
@@ -67,7 +58,7 @@ const Localization = (props) => {
                     <div className="choose__currency">
                         <h3>Currency</h3>
                         <div>
-                            <input type="radio" name="currency" value="USD ( US Dollar )" id="USD"/>
+                            <input type="radio" name="currency" value="USD ( US Dollar )" id="USD" checked/>
                             <label htmlFor="USD">USD ( US Dollar )</label>
                         </div>
                         <div>

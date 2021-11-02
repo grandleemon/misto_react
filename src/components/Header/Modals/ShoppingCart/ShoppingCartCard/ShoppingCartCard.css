@@ -1,0 +1,81 @@
+.shopping__cart-card{
+    display: flex;
+    position: relative;
+
+}
+
+.shopping__cart-card-body{
+    margin-left: 16px;
+}
+
+.shopping__cart-card-size-color{
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+.shopping__cart-card-title{
+    font-size: 16px;
+    font-weight: 400;
+    color: #121212;
+}
+
+.shopping__cart-card-img img{
+    width: 83px;
+    height: 104px;
+
+}
+
+.shopping__cart-card-footer{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 6px;
+}
+
+.shopping__cart-card-amount .remove, .add, .amount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 27px;
+    height: 32px;
+    background-color: #F8F8F8;
+}
+
+.shopping__cart-card-amount .remove{
+    cursor: pointer;
+}
+
+.shopping__cart-card-amount .add{
+    position: relative;
+    cursor: pointer;
+}
+
+.shopping__cart-card-amount .add div{
+    position: absolute;
+    top: 9px;
+}
+
+.shopping__cart-card-amount{
+    display: flex;
+    align-items: center;
+}
+
+.shopping__cart-card-price{
+    font-size: 14px;
+    font-weight: 700;
+    color: #121212;
+    margin-left: 16px;
+}
+
+.shopping__cart-card-delete{
+    margin-left: 60px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.shopping__cart-card-line hr{
+    margin-top: 12px;
+    border: 1px solid #E6E6E6;
+}
