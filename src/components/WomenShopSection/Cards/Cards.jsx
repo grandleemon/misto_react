@@ -18,7 +18,6 @@ const Cards = () => {
                 <Card cardImage={card3Image} colorVariants={card4Image} cardTitle={"Mercury Tee"} cardPrice={"$ 54.00"}/>
                 <Card cardImage={card4Image} colorVariants={card4Image} cardTitle={"Skin Sweatpans"} cardPrice={"$ 21.00"}/>
                 <Card cardImage={card5Image} colorVariants={card4Image} cardTitle={"Cream women pants"} cardPrice={"$ 45.00"}/>
-
             </div>
             <Button />
         </div>

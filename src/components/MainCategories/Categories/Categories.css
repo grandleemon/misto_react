@@ -21,6 +21,11 @@
     position:relative;
 }
 
+.categories a{
+    color: #121212;
+    text-decoration: none;
+}
+
 .women__category::before, .men__category::before, .accessories__category::before{
     box-sizing: inherit;
     content: '';

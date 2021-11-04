@@ -4,6 +4,7 @@ import Categories from "./Categories/Categories";
 import Slider from "./Slider/Slider";
 import Advantages from "./Advantages/Advantages";
 
+
 const MainCategories = () => {
     return (
         <div className="advantages__background">

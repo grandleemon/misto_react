@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './WomenShopSection.module.css'
 import Cards from "./Cards/Cards";
+
 const WomenShopSection = () => {
     return (
         <div className={styles.women__section}>
@@ -19,7 +20,7 @@ const WomenShopSection = () => {
                         </ul>
                     </div>
                 </div>
-                <Cards />
+                <Cards/>
             </div>
         </div>
     );

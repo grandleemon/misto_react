@@ -10,6 +10,7 @@ import Localization from "../Modals/Localization/Localization";
 import SearchModal from "../Modals/Search/SearchModal";
 import LoginModal from "../Modals/Login/LoginModal";
 import ShoppingCart from "../Modals/ShoppingCart/ShoppingCart";
+import { Link } from "react-router-dom";
 
 
 
@@ -86,7 +87,7 @@ render(){
             <div className="wrapper">
                 <div className="main__header">
                     <div className="logo__name">
-                        <a href="#">MiSto</a>
+                        <Link to="/">MiSto</Link>
                     </div>
                     <div className="menu__list">
                         <nav>
@@ -96,10 +97,12 @@ render(){
                                        href="#">About Us</a>
                                 </li>
                                 <li>
-                                    <a onMouseEnter={this.onMouseEnterWomen}
+                                    <Link onMouseEnter={this.onMouseEnterWomen}
                                        onMouseLeave={this.onMouseLeaveWomen}
                                        href="#"
-                                       style={styleWomenLink}>Women</a>
+                                       style={styleWomenLink}
+                                       to="/women"
+                                    onClick={this.onMouseLeaveWomen}>Women</Link>
                                 </li>
                                 <li>
                                     <a onMouseEnter={this.onMouseEnterMen}

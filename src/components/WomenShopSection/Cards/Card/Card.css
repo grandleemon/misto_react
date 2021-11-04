@@ -1,6 +1,6 @@
 .card{
     cursor: pointer;
-    width: 255px;
+    min-width: 255px;
     height: 318px;
     margin-bottom: 80px;
 }
