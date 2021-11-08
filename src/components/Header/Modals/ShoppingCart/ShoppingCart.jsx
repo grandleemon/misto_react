@@ -2,11 +2,14 @@ import React from 'react';
 import './ShoppingCart.css'
 import {useClickOutside} from "../../../UI/useClickOutside";
 import ShoppingCartCard from "./ShoppingCartCard/ShoppingCartCard";
-
-
+import {useSelector} from "react-redux";
 
 const ShoppingCart = (props) => {
 
+    let cart = useSelector((state => state.shoppingCart))
+    let renderedItems = cart.map(card => {
+        return <ShoppingCartCard key={card} image={card.image} cardPrice={card.cardPrice} title={card.title} color={card.color} size={card.size}/>
+    })
     let domNode = useClickOutside(() => {
         props.closeModal()
     })
@@ -22,7 +25,7 @@ const ShoppingCart = (props) => {
 
                 <div className="cart__body">
                     <div className="shopping_cart-cards">
-                        <ShoppingCartCard />
+                        {renderedItems}
 
                         <div className="shopping__cart-total">
                             <div className="total-price">

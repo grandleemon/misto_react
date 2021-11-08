@@ -1,7 +1,11 @@
 .shopping__cart-card{
     display: flex;
     position: relative;
+    margin-top: 25px;
+}
 
+.shopping__cart-card:nth-child(0){
+    margin-top: 0;
 }
 
 .shopping__cart-card-body{
@@ -40,6 +44,7 @@
     width: 27px;
     height: 32px;
     background-color: #F8F8F8;
+    user-select: none;
 }
 
 .shopping__cart-card-amount .remove{
