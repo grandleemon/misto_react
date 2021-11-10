@@ -14,27 +14,3 @@
     font-size: 22px;
     font-weight: 600;
 }
-
-.sorting__categories ul{
-    display: flex;
-}
-
-.sorting__categories ul li{
-    letter-spacing: 0.06em;
-    color: #121212;
-    opacity: 0.6;
-    font-size: 12px;
-    font-weight: 400;
-    list-style-type: none;
-    margin-right: 32px;
-    cursor: pointer;
-}
-
-.sorting__categories ul li:last-child{
-    margin-right: 0;
-}
-
-.sorting__categories .active{
-    opacity: 1;
-    font-weight: 500;
-}

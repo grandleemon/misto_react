@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from './WomenShopSection.module.css'
 import Cards from "./Cards/Cards";
+import Filter from "./Filter/Filter";
 
 const WomenShopSection = () => {
+
     return (
         <div className={styles.women__section}>
             <div className="wrapper">
@@ -11,13 +13,8 @@ const WomenShopSection = () => {
                         WOMEN’S
                     </div>
                     <div className={styles.sorting__categories}>
-                        <ul>
-                            <li className={styles.active}>NEW ARRIVALS</li>
-                            <li>SPECIALS</li>
-                            <li>BESTSELLERS</li>
-                            <li>MOST VIEWED</li>
-                            <li>FEATURED PRODUCTS</li>
-                        </ul>
+                        {["new arrivals", "specials", "bestsellers", "most viewed", "all"]
+                            .map(category => <Filter category={category} />)}
                     </div>
                 </div>
                 <Cards/>

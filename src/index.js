@@ -7,9 +7,11 @@ import {BrowserRouter} from "react-router-dom";
 import store from './store/store'
 import {Provider} from "react-redux";
 
+import store2 from './app/store2'
+
 ReactDOM.render(
     <BrowserRouter >
-        <Provider store={store}>
+        <Provider store={store2}>
             <App />
         </Provider>
     </BrowserRouter>,

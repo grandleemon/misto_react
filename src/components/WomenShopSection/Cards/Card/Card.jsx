@@ -2,8 +2,11 @@ import React from 'react';
 import './Card.css'
 import favorites from './../../../../icons/Card/heart.svg'
 import scales from './../../../../icons/Card/scales.svg'
+import {useDispatch} from "react-redux";
+import {addItemToCart} from "../../../../features/cart/cartSlice";
 
 const Card = (props) => {
+    const dispatch = useDispatch()
     return (
         <div className="card">
             <div className="card__image">
@@ -34,7 +37,8 @@ const Card = (props) => {
                     </div>
 
                     <div className="card__footer">
-                        <button className="cart__btn">ADD TO CART</button>
+                        <button onClick={() => {dispatch(addItemToCart('hi'))}}
+                                className="cart__btn">ADD TO CART</button>
 
                         <div className="card__footer-btns">
                             <div>

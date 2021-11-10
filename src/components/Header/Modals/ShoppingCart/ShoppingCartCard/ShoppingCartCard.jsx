@@ -13,6 +13,7 @@ const ShoppingCartCard = (props) => {
         setCount(count + 1)
     }
     const dec = () => {
+        if(count <= 1) return;
         setCount(count - 1)
     }
     let price = () => {
@@ -55,7 +56,7 @@ const ShoppingCartCard = (props) => {
                             {price()}
                         </div>
 
-                        <div className="shopping__cart-card-delete" onClick={ () => deleteCard(1)}>
+                        <div className="shopping__cart-card-delete" onClick={ () => deleteCard(props.id)}>
                             <img src={deleteIcon} alt=""/>
                         </div>
 
