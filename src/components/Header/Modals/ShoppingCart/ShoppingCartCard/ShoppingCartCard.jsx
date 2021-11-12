@@ -2,13 +2,13 @@ import React, {useState} from 'react';
 import './ShoppingCartCard.css'
 import deleteIcon from './../../../../../icons/Header/MainHeader/ShopppingCartCard/delete-icon.svg'
 import {useDispatch, useSelector} from "react-redux";
+import {getCartItems} from "../../../../../features/cart/cartSlice";
 
 
 
 
-const ShoppingCartCard = (props) => {
+const ShoppingCartCard = ({card}) => {
     const [count, setCount] = useState(1)
-    const id = useSelector((state => state.shoppingCart.id))
     const inc = () => {
         setCount(count + 1)
     }
@@ -18,9 +18,9 @@ const ShoppingCartCard = (props) => {
     }
     let price = () => {
         if(count === 1){
-            return props.cardPrice
+            return "$ " + card.price
         } else {
-            return props.cardPrice * count
+            return "$ " + (card.price * count)
         }
     }
 
@@ -33,15 +33,15 @@ const ShoppingCartCard = (props) => {
         <div className="shopping__cart-card-line">
             <div className="shopping__cart-card">
                 <div className="shopping__cart-card-img">
-                    <img src={props.image} alt=""/>
+                    <img src={card.image} alt=""/>
                 </div>
 
                 <div className="shopping__cart-card-body">
                     <div className="shopping__cart-card-title">
-                        {props.title}
+                        {card.title}
                     </div>
                     <div className="shopping__cart-card-size-color">
-                        {props.color + ", " + props.size}
+                        {card.size}
                     </div>
                     <div className="shopping__cart-card-footer">
                         <div className="shopping__cart-card-amount">
@@ -56,7 +56,7 @@ const ShoppingCartCard = (props) => {
                             {price()}
                         </div>
 
-                        <div className="shopping__cart-card-delete" onClick={ () => deleteCard(props.id)}>
+                        <div className="shopping__cart-card-delete" onClick={ () => deleteCard(card.productID)}>
                             <img src={deleteIcon} alt=""/>
                         </div>
 

@@ -5,27 +5,27 @@ import scales from './../../../../icons/Card/scales.svg'
 import {useDispatch} from "react-redux";
 import {addItemToCart} from "../../../../features/cart/cartSlice";
 
-const Card = (props) => {
+const Card = ({card}) => {
     const dispatch = useDispatch()
     return (
         <div className="card">
             <div className="card__image">
-                <img src={props.cardImage} alt=""/>
+                <img src={card.cardImage} alt=""/>
             </div>
             <div className="card__content">
                 <div className="card__title">
-                    {props.cardTitle}
+                    {card.cardTitle}
                 </div>
                 <div className="card__price">
-                    {props.cardPrice}
+                    {("$ ") +  card.cardPrice}
                 </div>
                 <div className="card__hidden-info">
                     <div className="color__picker">
                         <div>
-                            <img src={props.cardImage} alt=""/>
-                            <img src={props.colorVariants} alt=""/>
-                            <img src={props.colorVariants} alt=""/>
-                            <img src={props.colorVariants} alt=""/>
+                            <img src={card.cardImage} alt=""/>
+                            <img src={card.colorVariants} alt=""/>
+                            <img src={card.colorVariants} alt=""/>
+                            <img src={card.colorVariants} alt=""/>
                         </div>
                     </div>
 
@@ -37,7 +37,7 @@ const Card = (props) => {
                     </div>
 
                     <div className="card__footer">
-                        <button onClick={() => {dispatch(addItemToCart('hi'))}}
+                        <button onClick={() => {dispatch(addItemToCart({card}))}}
                                 className="cart__btn">ADD TO CART</button>
 
                         <div className="card__footer-btns">
@@ -56,4 +56,4 @@ const Card = (props) => {
     );
 };
 
-export default Card;
+export default Card

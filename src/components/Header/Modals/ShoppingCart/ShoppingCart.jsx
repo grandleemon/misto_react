@@ -3,6 +3,7 @@ import './ShoppingCart.css'
 import {useClickOutside} from "../../../UI/useClickOutside";
 import ShoppingCartCard from "./ShoppingCartCard/ShoppingCartCard";
 import {useSelector} from "react-redux";
+import {getCartItems} from "../../../../features/cart/cartSlice";
 
 const ShoppingCart = (props) => {
 
@@ -10,6 +11,11 @@ const ShoppingCart = (props) => {
     // let renderedItems = cart.map(card => {
     //     return <ShoppingCartCard id={card.id} image={card.image} cardPrice={card.price} title={card.title} color={card.color} size={card.size}/>
     // })
+
+    const cartItems = useSelector(getCartItems)
+    const renderedItems = cartItems.map(card=> {
+        return <ShoppingCartCard card={card} />
+    })
 
     let domNode = useClickOutside(() => {
         props.closeModal()
@@ -26,7 +32,7 @@ const ShoppingCart = (props) => {
 
                 <div className="cart__body">
                     <div className="shopping_cart-cards">
-                        {/*{renderedItems}*/}
+                        {renderedItems}
 
                         <div className="shopping__cart-total">
                             <div className="total-price">

@@ -8,10 +8,21 @@ export const slice = createSlice({
     },
     reducers: {
         addItemToCart: (state, action) => {
-            alert(action.payload)
+            const pseudoID = (new Date()).getTime(); //id for a cart item
+            debugger
+            state.cartItems.push({
+                id: pseudoID,
+                productID: action.payload.card.id,
+                price: action.payload.card.cardPrice,
+                image: action.payload.card.cardImage,
+                title: action.payload.card.cardTitle,
+                size: "S"
+            })
         }
     }
 })
+
+export const getCartItems = state => state.cart.cartItems;
 
 export const {addItemToCart} = slice.actions
 

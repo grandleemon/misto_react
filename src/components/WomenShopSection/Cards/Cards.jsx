@@ -18,7 +18,7 @@ const Cards = () => {
             return selectedCategory === card.sortCategory
         })
         .map( card => {
-        return <Card cardImage={card.cardImage} colorVariants={card.colorVariants} cardTitle={card.cardTitle} cardPrice={card.cardPrice} />
+        return <Card card={card} />
     } )
     return (
         <div>
