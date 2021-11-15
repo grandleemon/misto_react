@@ -2,6 +2,7 @@ import React from 'react';
 import styles from "../WomenShopSection/WomenShopSection.module.css";
 import "./MenShopCategories.css"
 import MenShopCards from "./MenShopCards/MenShopCards";
+import FilterMenCategory from "./Filter/filterMenCategory";
 
 const MenShopCategories = () => {
     return (
@@ -12,13 +13,8 @@ const MenShopCategories = () => {
                         MEN'S
                     </div>
                     <div className={styles.sorting__categories}>
-                        <ul>
-                            <li className={styles.active}>NEW ARRIVALS</li>
-                            <li>SPECIALS</li>
-                            <li>BESTSELLERS</li>
-                            <li>MOST VIEWED</li>
-                            <li>FEATURED PRODUCTS</li>
-                        </ul>
+                        {["new arrivals", "specials", "bestsellers", "most viewed", "all"]
+                            .map(category => <FilterMenCategory category={category} />)}
                     </div>
                 </div>
                 <MenShopCards />

@@ -1,5 +1,5 @@
 .main__categories{
-    padding-top: 32px;
     display: flex;
     justify-content: space-between;
+    padding-top: 120px;
 }

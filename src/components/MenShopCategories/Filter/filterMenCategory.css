@@ -1,0 +1,14 @@
+.filterButton{
+    margin-left: 22px;
+    padding: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 12px;
+    opacity: 0.6;
+    letter-spacing: 0.06em;
+    user-select: none;
+}
+
+.filterButton.filterButtonActive{
+    opacity: 1;
+}

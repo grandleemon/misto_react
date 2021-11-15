@@ -1,15 +1,23 @@
 import React from 'react';
-import './Card.css'
+import {useDispatch} from "react-redux";
+import {useNavigate} from "react-router-dom";
+import {addItemToCart} from "../../../../features/cart/cartSlice";
+import {setCurrentProduct} from "../../../../features/products/productsSlice";
 import favorites from './../../../../icons/Card/heart.svg'
 import scales from './../../../../icons/Card/scales.svg'
-import {useDispatch} from "react-redux";
-import {addItemToCart} from "../../../../features/cart/cartSlice";
+import './Card.css'
+
 
 const Card = ({card}) => {
+    const navigate = useNavigate()
     const dispatch = useDispatch()
+    const handleClick = () => {
+        dispatch(setCurrentProduct(card))
+        navigate(`/products/${card.cardTitle}`)
+    }
     return (
-        <div className="card">
-            <div className="card__image">
+        <div className="card" >
+            <div className="card__image" onClick={handleClick}>
                 <img src={card.cardImage} alt=""/>
             </div>
             <div className="card__content">
@@ -17,7 +25,7 @@ const Card = ({card}) => {
                     {card.cardTitle}
                 </div>
                 <div className="card__price">
-                    {("$ ") +  card.cardPrice}
+                    {("$ ") +  card.cardPrice.toFixed(2)}
                 </div>
                 <div className="card__hidden-info">
                     <div className="color__picker">

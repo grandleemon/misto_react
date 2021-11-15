@@ -1,12 +1,12 @@
 .shopping-cart{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     background-color: white;
     height: 930px;
-    overflow: hidden;
     width: 400px;
     z-index: 3;
+    overflow-y: scroll;
 }
 
 .cart__header{
@@ -77,6 +77,11 @@
     opacity: 0.9;
     margin-top: 21px;
     cursor: pointer;
+}
+
+.emptyCart{
+    margin-top: 24px;
+    opacity: 0.8;
 }
 
 

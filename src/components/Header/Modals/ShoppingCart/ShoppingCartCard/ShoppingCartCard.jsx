@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './ShoppingCartCard.css'
 import deleteIcon from './../../../../../icons/Header/MainHeader/ShopppingCartCard/delete-icon.svg'
 import {useDispatch, useSelector} from "react-redux";
-import {getCartItems} from "../../../../../features/cart/cartSlice";
+import {getCartItems, removeItemFromCart} from "../../../../../features/cart/cartSlice";
 
 
 
@@ -18,7 +18,7 @@ const ShoppingCartCard = ({card}) => {
     }
     let price = () => {
         if(count === 1){
-            return "$ " + card.price
+            return "$ " + card.price.toFixed(2)
         } else {
             return "$ " + (card.price * count)
         }
@@ -26,9 +26,6 @@ const ShoppingCartCard = ({card}) => {
 
     const dispatch = useDispatch()
 
-    const deleteCard = (id) => {
-        dispatch({type:'cart/remove', payload: id})
-    }
     return (
         <div className="shopping__cart-card-line">
             <div className="shopping__cart-card">
@@ -56,7 +53,7 @@ const ShoppingCartCard = ({card}) => {
                             {price()}
                         </div>
 
-                        <div className="shopping__cart-card-delete" onClick={ () => deleteCard(card.productID)}>
+                        <div className="shopping__cart-card-delete" onClick={ () => dispatch(removeItemFromCart({card}))}>
                             <img src={deleteIcon} alt=""/>
                         </div>
 

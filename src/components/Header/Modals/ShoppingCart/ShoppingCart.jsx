@@ -31,7 +31,7 @@ const ShoppingCart = (props) => {
                 </div>
 
                 <div className="cart__body">
-                    <div className="shopping_cart-cards">
+                    {cartItems.length ? <div className="shopping_cart-cards">
                         {renderedItems}
 
                         <div className="shopping__cart-total">
@@ -42,7 +42,8 @@ const ShoppingCart = (props) => {
 
                             <button>Check Out</button>
                         </div>
-                    </div>
+                    </div> : <div className="emptyCart">The cart is empty</div> }
+
                 </div>
             </div> : null}
 

@@ -1,10 +1,9 @@
 import React from 'react';
 import Card from "./Card/Card";
-import './Cards.css'
-
 import Button from "../../../UI/button/Button";
 import {useSelector} from "react-redux";
 import {getSelectedCategory} from "../../../features/womenCategory/womenCategorySlice";
+import './Cards.css'
 
 
 

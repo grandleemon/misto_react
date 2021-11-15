@@ -16,14 +16,20 @@ export const slice = createSlice({
                 price: action.payload.card.cardPrice,
                 image: action.payload.card.cardImage,
                 title: action.payload.card.cardTitle,
-                size: "S"
+                size: action.payload.size
             })
+        },
+        removeItemFromCart: (state, action) => {
+            state.cartItems = state.cartItems.filter(
+                cartItem => cartItem.id !== action.payload.card.id
+            )
         }
+
     }
 })
 
 export const getCartItems = state => state.cart.cartItems;
 
-export const {addItemToCart} = slice.actions
+export const {addItemToCart, removeItemFromCart} = slice.actions
 
 export default slice.reducer;

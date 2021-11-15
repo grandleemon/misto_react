@@ -1,11 +1,11 @@
 .localization{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     background-color: white;
     height: 100%;
     width: 400px;
-    z-index: 3;
+    z-index: 999;
 }
 
 .localization__header{

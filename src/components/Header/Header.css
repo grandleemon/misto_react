@@ -1,6 +1,9 @@
 
 .background{
     background-color: #121212;
+    position: fixed;
+    width: 100%;
+    z-index: 111;
 }
 
 .top__header{
@@ -10,13 +13,16 @@
     align-items: center;
     min-height: 24px;
     opacity: 0.8;
-
 }
 
 .main__header-background{
     border-bottom: 1px solid #F8F8F8;
-    box-shadow: 0 2px 2px #F8F8F8;
     transition: .5s;
+    position: fixed;
+    z-index: 111;
+    background-color: #fff;
+    width: 100%;
+    margin-top: 24px;
 }
 
 .main__header-background:hover{

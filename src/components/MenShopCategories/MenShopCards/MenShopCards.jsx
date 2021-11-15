@@ -2,17 +2,24 @@ import React from 'react';
 import Card from "../../WomenShopSection/Cards/Card/Card";
 import Button from "../../../UI/button/Button";
 import {useSelector} from "react-redux";
+import {getMenItems, getSelectedCategory} from "../../../features/menCategory/menCategorySlice";
 
 
 const MenShopCards = () => {
-    // const menCards = useSelector((state => state.menCards))
-    // const renderedItems = menCards.map((card) => {
-    //     return <Card cardImage={card.cardImage} colorVariants={card.colorVariants} cardTitle={card.cardTitle} cardPrice={card.cardPrice} />
-    // })
+    const menCards = useSelector(getMenItems)
+    const selectedCategory = useSelector(getSelectedCategory)
+    const renderedItems = menCards
+        .filter(card => {
+            if(selectedCategory === "all") return true;
+            return selectedCategory === card.sortCategory
+        })
+        .map(card => {
+            return <Card card={card} />
+        })
     return (
         <div>
             <div className="shopping__cards">
-                {/*{renderedItems}*/}
+                {renderedItems}
             </div>
             <Button />
         </div>
