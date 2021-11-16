@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './ShoppingCartCard.css'
 import deleteIcon from './../../../../../icons/Header/MainHeader/ShopppingCartCard/delete-icon.svg'
 import {useDispatch, useSelector} from "react-redux";
-import {getCartItems, removeItemFromCart} from "../../../../../features/cart/cartSlice";
+import {removeItemFromCart} from "../../../../../features/cart/cartSlice";
 
 
 
@@ -20,7 +20,7 @@ const ShoppingCartCard = ({card}) => {
         if(count === 1){
             return "$ " + card.price.toFixed(2)
         } else {
-            return "$ " + (card.price * count)
+            return "$ " + (card.price * count).toFixed(2)
         }
     }
 

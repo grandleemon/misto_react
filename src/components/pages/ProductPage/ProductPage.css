@@ -84,6 +84,12 @@
     opacity: 0.6;
 }
 
+.product__information hr:nth-of-type(2){
+    margin-top: 32px;
+    border-color: #E6E6E6;
+    opacity: 0.6;
+}
+
 .product__price{
     font-size: 22px;
     font-weight: 700;
@@ -94,7 +100,7 @@
 .product__buy{
     display: flex;
     align-items: center;
-    margin-top: 38px;
+    margin-top: 32px;
 }
 
 .product__buy-btn button{
@@ -106,4 +112,42 @@
     margin-left: 24px;
     width: 156px;
     height: 48px;
+}
+
+.product__advantages{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 35px;
+}
+
+.product__advantages div{
+    opacity: 0.6;
+    color: #121212;
+    font-weight: 500;
+    font-size: 14px;
+    user-select: none;
+}
+
+.product__advantages div:last-child{
+    cursor: pointer;
+}
+
+.product__checkout{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.product__checkout span{
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+.product__checkout hr{
+    border-color: #E6E6E6;
+    opacity: 0.6;
+    width: 60%;
+    margin-top: 0;
 }

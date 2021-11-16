@@ -13,8 +13,9 @@ const ShoppingCart = (props) => {
     // })
 
     const cartItems = useSelector(getCartItems)
-    const renderedItems = cartItems.map(card=> {
-        return <ShoppingCartCard card={card} />
+    const totalPrice = cartItems.reduce((acc, card) => acc += card.price, 0)
+    const renderedItems = cartItems.map(card => {
+        return <ShoppingCartCard card={card}  />
     })
 
     let domNode = useClickOutside(() => {
@@ -37,7 +38,7 @@ const ShoppingCart = (props) => {
                         <div className="shopping__cart-total">
                             <div className="total-price">
                                 <div className="total">Total</div>
-                                <div className="price">$379.99</div>
+                                <div className="price">$ {totalPrice.toFixed(2)}</div>
                             </div>
 
                             <button>Check Out</button>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useDispatch} from "react-redux";
 import {useNavigate} from "react-router-dom";
 import {addItemToCart} from "../../../../features/cart/cartSlice";
@@ -14,6 +14,10 @@ const Card = ({card}) => {
     const handleClick = () => {
         dispatch(setCurrentProduct(card))
         navigate(`/products/${card.cardTitle}`)
+    }
+    const [size, setSize] = useState("s")
+    const changeSize = (size) => {
+        setSize(size)
     }
     return (
         <div className="card" >
@@ -37,15 +41,15 @@ const Card = ({card}) => {
                         </div>
                     </div>
 
-                    <div className="dimensions__picker">
-                        <div>XS</div>
-                        <div>S</div>
-                        <div>M</div>
-                        <div>L</div>
+                    <div className="size__picker">
+                        {["xs", "s", "m", "l"]
+                            .map(value => <div
+                                className={value === size ? "buttonActive" : ""}
+                                onClick={() => {changeSize(value)}}>{value}</div>)}
                     </div>
 
                     <div className="card__footer">
-                        <button onClick={() => {dispatch(addItemToCart({card}))}}
+                        <button onClick={() => {dispatch(addItemToCart({card, size}))}}
                                 className="cart__btn">ADD TO CART</button>
 
                         <div className="card__footer-btns">

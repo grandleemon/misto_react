@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {getCurrentProduct} from "../../../features/products/productsSlice";
 import Feedback from "../../Feedback/Feedback";
 import {addItemToCart} from "../../../features/cart/cartSlice";
+import stripe from "./../../../images/Pages/ProductPage/stripe.svg"
 
 const ProductPage = () => {
     const dispatch = useDispatch()
@@ -32,18 +33,37 @@ const ProductPage = () => {
                                 {["xs", "s", "m", "l"]
                                     .map(value => <button
                                         className={value === size ? "buttonActive" : ""}
-                                        onClick={() => {changeSize(value)}}>{value}</button>)}
+                                        onClick={() => {
+                                            changeSize(value)
+                                        }}>{value}</button>)}
                             </div>
                         </div>
-                            <hr/>
-                            <div className="product__buy">
-                                <div className="product__price">
-                                    $ {card.cardPrice.toFixed(2)}
-                                </div>
-                                <div className="product__buy-btn">
-                                    <button onClick={ () => {dispatch(addItemToCart({card, size}))}}>add to cart</button>
-                                </div>
+                        <hr/>
+                        <div className="product__buy">
+                            <div className="product__price">
+                                $ {card.cardPrice.toFixed(2)}
                             </div>
+                            <div className="product__buy-btn">
+                                <button onClick={() => {
+                                    dispatch(addItemToCart({card, size}))
+                                }}>add to cart
+                                </button>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div className="product__advantages">
+                            <div>Shipping & Delivery</div>
+                            <div>Returns & Exchanges</div>
+                            <div>Ask a question</div>
+                        </div>
+
+                        <div className="product__checkout">
+                            <span>guaranteed safe checkout</span>
+                            <hr/>
+                        </div>
+                        <div className="payment-methods">
+                            <img src={stripe} alt=""/>
+                        </div>
                     </div>
                 </div>
             </div>
