@@ -10,11 +10,11 @@ export const slice = createSlice({
     name: "womenCategory",
     initialState: {
         womenCategoryItems: [
-            {id: 1, sortCategory: "new arrivals", cardImage: card1Image, colorVariants: card1Image, cardTitle: "Women's tracksuit Q109", cardPrice: 38.00},
-            {id: 2, sortCategory: "bestsellers", cardImage: card2Image, colorVariants: card2Image, cardTitle: "Cluse La Boheme Rose Gold", cardPrice: 38.00},
-            {id: 3, sortCategory: "specials", cardImage: card3Image, colorVariants: card3Image, cardTitle: "Mercury Tee", cardPrice: 38.00},
-            {id: 4, sortCategory: "most viewed", cardImage: card4Image, colorVariants: card4Image, cardTitle: "Skin Sweatpans", cardPrice: 38.00},
-            {id: 5, sortCategory: "new arrivals", cardImage: card5Image, colorVariants: card5Image, cardTitle: "Cream women pants", cardPrice: 38.00}
+            {id: 1, sortCategory: "new arrivals", cardImage: card1Image, colorVariants: card1Image, cardTitle: "Women's tracksuit Q109", cardPrice: 38.00, quantity: 1},
+            {id: 2, sortCategory: "bestsellers", cardImage: card2Image, colorVariants: card2Image, cardTitle: "Cluse La Boheme Rose Gold", cardPrice: 38.00, quantity: 1},
+            {id: 3, sortCategory: "specials", cardImage: card3Image, colorVariants: card3Image, cardTitle: "Mercury Tee", cardPrice: 38.00, quantity: 1},
+            {id: 4, sortCategory: "most viewed", cardImage: card4Image, colorVariants: card4Image, cardTitle: "Skin Sweatpans", cardPrice: 38.00, quantity: 1},
+            {id: 5, sortCategory: "new arrivals", cardImage: card5Image, colorVariants: card5Image, cardTitle: "Cream women pants", cardPrice: 38.00, quantity: 1}
             ],
         selectedSortCategory: 'all'
     },

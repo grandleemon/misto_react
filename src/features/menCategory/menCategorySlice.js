@@ -10,11 +10,11 @@ export const slice = createSlice({
     name: "menCategory",
     initialState: {
         menCategoryItems: [
-            {id: 1, sortCategory: "new arrivals", cardImage: card1Image, colorVariants: card1Image, cardTitle: "Striped Sweatshirt", cardPrice: 38.00},
-            {id: 2, sortCategory: "bestsellers", cardImage: card2Image, colorVariants: card2Image, cardTitle: "Men pants", cardPrice: 30.00},
-            {id: 3, sortCategory: "specials", cardImage: card3Image, colorVariants: card3Image, cardTitle: "Men Knit Sweater", cardPrice: 54.00},
-            {id: 4, sortCategory: "most viewed", cardImage: card4Image, colorVariants: card4Image, cardTitle: "Dusk Pom Beanie", cardPrice: 180.00},
-            {id: 5, sortCategory: "new arrivals", cardImage: card5Image, colorVariants: card5Image, cardTitle: "Leather White Trainers", cardPrice: 45.00},
+            {id: 1, sortCategory: "new arrivals", cardImage: card1Image, colorVariants: card1Image, cardTitle: "Striped Sweatshirt", cardPrice: 38.00, quantity: 1},
+            {id: 2, sortCategory: "bestsellers", cardImage: card2Image, colorVariants: card2Image, cardTitle: "Men pants", cardPrice: 30.00, quantity: 1},
+            {id: 3, sortCategory: "specials", cardImage: card3Image, colorVariants: card3Image, cardTitle: "Men Knit Sweater", cardPrice: 54.00, quantity: 1},
+            {id: 4, sortCategory: "most viewed", cardImage: card4Image, colorVariants: card4Image, cardTitle: "Dusk Pom Beanie", cardPrice: 180.00, quantity: 1},
+            {id: 5, sortCategory: "new arrivals", cardImage: card5Image, colorVariants: card5Image, cardTitle: "Leather White Trainers", cardPrice: 45.00, quantity: 1},
         ],
         selectedSortMenCategory: 'all'
     },

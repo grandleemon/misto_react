@@ -13,6 +13,8 @@ const ProductPage = () => {
     const changeSize = (size) => {
         setSize(size)
     }
+    if(!card) return null;
+
     return (
         <div className="product__page">
             <div className="product__page-header">

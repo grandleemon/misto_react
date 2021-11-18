@@ -1,9 +1,11 @@
 import React from 'react';
-import './ShoppingCart.css'
-import {useClickOutside} from "../../../UI/useClickOutside";
-import ShoppingCartCard from "./ShoppingCartCard/ShoppingCartCard";
 import {useSelector} from "react-redux";
-import {getCartItems} from "../../../../features/cart/cartSlice";
+import {useClickOutside} from "../../../UI/useClickOutside";
+import {useNavigate} from "react-router-dom";
+import ShoppingCartCard from "./ShoppingCartCard/ShoppingCartCard";
+import {getCartItems, getTotalPrice} from "../../../../features/cart/cartSlice";
+import './ShoppingCart.css'
+import {calcTotalPrice} from "../../../utils/calcTotalPrice";
 
 const ShoppingCart = (props) => {
 
@@ -13,14 +15,20 @@ const ShoppingCart = (props) => {
     // })
 
     const cartItems = useSelector(getCartItems)
-    const totalPrice = cartItems.reduce((acc, card) => acc += card.price, 0)
+    const totalPrice = calcTotalPrice(cartItems)
+    const totalPrice2 = useSelector(getTotalPrice)
     const renderedItems = cartItems.map(card => {
-        return <ShoppingCartCard card={card}  />
+        return <ShoppingCartCard card={card} totalPrice={totalPrice}  />
     })
 
-    let domNode = useClickOutside(() => {
+    const domNode = useClickOutside(() => {
         props.closeModal()
     })
+    const navigate = useNavigate()
+    const handleClick = () => {
+        props.closeModal()
+        navigate('/order')
+    }
 
     return (
         <div>
@@ -38,10 +46,10 @@ const ShoppingCart = (props) => {
                         <div className="shopping__cart-total">
                             <div className="total-price">
                                 <div className="total">Total</div>
-                                <div className="price">$ {totalPrice.toFixed(2)}</div>
+                                <div className="price">$ {totalPrice2.toFixed(2)}</div>
                             </div>
 
-                            <button>Check Out</button>
+                            <button onClick={handleClick}>Check Out</button>
                         </div>
                     </div> : <div className="emptyCart">The cart is empty</div> }
 
