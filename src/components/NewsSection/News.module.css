@@ -12,7 +12,7 @@
 .new__season{
     width: 540px;
     height: 260px;
-    background-image: url("./../../images/NewsSection/new collection.jpg");
+    background-image: url("../../assets/images/NewsSection/new collection.jpg");
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -23,7 +23,7 @@
 .sale{
     width: 540px;
     height: 260px;
-    background-image: url("./../../images/NewsSection/sale.jpg");
+    background-image: url("../../assets/images/NewsSection/sale.jpg");
     background-size: cover;
     display: flex;
     justify-content: center;

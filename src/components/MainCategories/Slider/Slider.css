@@ -1,15 +1,36 @@
 .bestsellers{
-    background-image: url("./../../../images/Header/MainCategories/Categories/slider.jpg");
-    background-size: cover;
-    width: 48%;
-    height: 720px;
-    background-position-y: -100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 24px 0 24px;
     cursor: pointer;
-    background-repeat: no-repeat;
+    position: relative;
+    z-index: 10;
+    width: 49%;
+    overflow: hidden;
+}
+
+.slider{
+    width: 100%;
+    position: absolute;
+    display: flex;
+}
+
+.slider img{
+    padding-top: 150px;
+    width: 100%;
+    height: 100%;
+}
+.slide.active{
+    animation: slidein .9s forwards;
+    position: relative;
+}
+@keyframes slidein {
+    from {
+        left: 25%;
+    }
+    to {
+        left: 0;
+    }
 }
 
 .slider__item-content{
@@ -19,6 +40,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .arrow{
@@ -30,6 +54,15 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: absolute;
+    user-select: none;
+}
+
+.arrow.arrow-right{
+    right: 3%;
+}
+.arrow.arrow-left{
+    left: 3%;
 }
 
 .slider__item-type{

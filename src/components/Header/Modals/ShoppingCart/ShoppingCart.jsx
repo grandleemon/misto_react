@@ -1,9 +1,9 @@
 import React from 'react';
 import {useSelector} from "react-redux";
-import {useClickOutside} from "../../../UI/useClickOutside";
+import {useClickOutside} from "../../../UI/hooks/useClickOutside";
 import {useNavigate} from "react-router-dom";
 import ShoppingCartCard from "./ShoppingCartCard/ShoppingCartCard";
-import {getCartItems, getTotalPrice} from "../../../../features/cart/cartSlice";
+import {getCartItems, getTotalPrice} from "../../../../app/features/cart/cartSlice";
 import './ShoppingCart.css'
 import {calcTotalPrice} from "../../../utils/calcTotalPrice";
 

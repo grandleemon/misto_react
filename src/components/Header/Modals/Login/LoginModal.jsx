@@ -1,8 +1,8 @@
 import React from 'react';
 import './LoginModal.css'
-import {useClickOutside} from "../../../UI/useClickOutside";
-import facebookIcon from "./../../../../icons/Header/MainHeader/LoginModal/facebook-icon.svg"
-import googleIcon from "./../../../../icons/Header/MainHeader/LoginModal/google-icon.png"
+import {useClickOutside} from "../../../UI/hooks/useClickOutside";
+import facebookIcon from "../../../../assets/icons/Header/MainHeader/LoginModal/facebook-icon.svg"
+import googleIcon from "../../../../assets/icons/Header/MainHeader/LoginModal/google-icon.png"
 
 
 const LoginModal = (props) => {

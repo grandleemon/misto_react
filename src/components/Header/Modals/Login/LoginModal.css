@@ -6,6 +6,7 @@
     height: 100%;
     width: 400px;
     z-index: 3;
+    box-shadow: -10px 5px 10px rgba(0, 0, 0, 0.32);
 }
 
 .login__header{

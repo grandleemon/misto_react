@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from "./Card/Card";
-import Button from "../../../UI/button/Button";
+import Button from "../../button/Button";
 import {useSelector} from "react-redux";
-import {getSelectedCategory} from "../../../features/womenCategory/womenCategorySlice";
+import {getSelectedCategory} from "../../../app/features/womenCategory/womenCategorySlice";
 import './Cards.css'
 
 

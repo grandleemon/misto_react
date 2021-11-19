@@ -1,6 +1,6 @@
 import React from 'react';
 import './Search.css'
-import {useClickOutside} from "../../../UI/useClickOutside";
+import {useClickOutside} from "../../../UI/hooks/useClickOutside";
 
 
 

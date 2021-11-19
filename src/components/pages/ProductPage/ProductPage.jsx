@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import './ProductPage.css'
 import {useDispatch, useSelector} from "react-redux";
-import {getCurrentProduct} from "../../../features/products/productsSlice";
+import {getCurrentProduct} from "../../../app/features/products/productsSlice";
 import Feedback from "../../Feedback/Feedback";
-import {addItemToCart} from "../../../features/cart/cartSlice";
-import stripe from "./../../../images/Pages/ProductPage/stripe.svg"
+import {addItemToCart} from "../../../app/features/cart/cartSlice";
+import stripe from "../../../assets/images/Pages/ProductPage/stripe.svg"
 
 const ProductPage = () => {
     const dispatch = useDispatch()

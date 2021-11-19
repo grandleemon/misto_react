@@ -4,10 +4,9 @@ import App from './App';
 import "typeface-spartan"
 import "typeface-playfair-display"
 import {BrowserRouter} from "react-router-dom";
-import store from './store/store'
 import {Provider} from "react-redux";
 
-import store2 from './app/store2'
+import store2 from './app/store'
 
 ReactDOM.render(
     <BrowserRouter >

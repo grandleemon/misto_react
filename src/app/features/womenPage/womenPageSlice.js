@@ -1,9 +1,9 @@
 import {createSlice} from "@reduxjs/toolkit";
-import card1Image from "../../images/WomenShopSection/Cards/womenTracksuitQ109.jpg";
-import card2Image from "../../images/WomenShopSection/Cards/Cluse La Boheme Rose Gold.jpg";
-import card3Image from "../../images/WomenShopSection/Cards/Mercury Tee.jpg";
-import card4Image from "../../images/WomenShopSection/Cards/Skin Sweatpans.jpg";
-import card5Image from "../../images/WomenShopSection/Cards/Cream women pants.jpg";
+import card1Image from "../../../assets/images/WomenShopSection/Cards/womenTracksuitQ109.jpg";
+import card2Image from "../../../assets/images/WomenShopSection/Cards/Cluse La Boheme Rose Gold.jpg";
+import card3Image from "../../../assets/images/WomenShopSection/Cards/Mercury Tee.jpg";
+import card4Image from "../../../assets/images/WomenShopSection/Cards/Skin Sweatpans.jpg";
+import card5Image from "../../../assets/images/WomenShopSection/Cards/Cream women pants.jpg";
 
 
 export const slice = createSlice({

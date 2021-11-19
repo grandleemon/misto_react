@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {useDispatch} from "react-redux";
 import {useNavigate} from "react-router-dom";
-import {addItemToCart} from "../../../../features/cart/cartSlice";
-import {setCurrentProduct} from "../../../../features/products/productsSlice";
-import favorites from './../../../../icons/Card/heart.svg'
-import scales from './../../../../icons/Card/scales.svg'
+import {addItemToCart} from "../../../../app/features/cart/cartSlice";
+import {setCurrentProduct} from "../../../../app/features/products/productsSlice";
+import favorites from '../../../../assets/icons/Card/heart.svg'
+import scales from '../../../../assets/icons/Card/scales.svg'
 import './Card.css'
 
 

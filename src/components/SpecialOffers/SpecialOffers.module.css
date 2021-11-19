@@ -10,7 +10,7 @@
 .special__offersBackground::before{
     position: absolute;
     content: '';
-    background-image: url("./../../images/SpecialOffers/woman.png");
+    background-image: url("../../assets/images/SpecialOffers/woman.png");
     width: 323px;
     height: 575px;
     bottom: -4%;
@@ -20,7 +20,7 @@
 .special__offersBackground::after{
     position: absolute;
     content: '';
-    background-image: url("./../../images/SpecialOffers/man.png");
+    background-image: url("../../assets/images/SpecialOffers/man.png");
     width: 219px;
     height: 524px;
     bottom: 5%;

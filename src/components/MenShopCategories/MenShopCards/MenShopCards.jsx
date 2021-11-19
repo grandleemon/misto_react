@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from "../../WomenShopSection/Cards/Card/Card";
-import Button from "../../../UI/button/Button";
+import Button from "../../button/Button";
 import {useSelector} from "react-redux";
-import {getMenItems, getSelectedCategory} from "../../../features/menCategory/menCategorySlice";
+import {getMenItems, getSelectedCategory} from "../../../app/features/menCategory/menCategorySlice";
 
 
 const MenShopCards = () => {

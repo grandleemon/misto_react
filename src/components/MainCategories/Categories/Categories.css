@@ -9,8 +9,8 @@
 
 .women__category{
     width: 370px;
-    height: 350px;
-    background-image: url("./../../../images/Header/MainCategories/Categories/women.jpg");
+    height: 342px;
+    background-image: url("../../../assets/images/Header/MainCategories/Categories/women.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -72,8 +72,8 @@
 
 .men__category{
     width: 355px;
-    height: 350px;
-    background-image: url("./../../../images/Header/MainCategories/Categories/men.jpg");
+    height: 342px;
+    background-image: url("../../../assets/images/Header/MainCategories/Categories/men.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -86,8 +86,8 @@
 
 .accessories__category{
     width: 738px;
-    height: 360px;
-    background-image: url("./../../../images/Header/MainCategories/Categories/accessories.jpg");
+    height: 352px;
+    background-image: url("../../../assets/images/Header/MainCategories/Categories/accessories.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -105,4 +105,10 @@
     color: #121212;
     font-weight: 600;
     padding: 13px 24px;
+}
+
+@media (max-width: 1430px ) {
+    .accessories__category{
+        width: 638px;
+    }
 }

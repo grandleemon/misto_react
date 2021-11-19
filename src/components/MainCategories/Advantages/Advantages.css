@@ -21,7 +21,7 @@
     position: absolute;
     width: 32px;
     height: 26px;
-    background-image: url("./../../../icons/MainCategories/Advantages/truck.svg");
+    background-image: url("../../../assets/icons/MainCategories/Advantages/truck.svg");
     left: -37px;
     background-repeat: no-repeat;
 }
@@ -31,7 +31,7 @@
     position: absolute;
     width: 32px;
     height: 29px;
-    background-image: url("./../../../icons/MainCategories/Advantages/return.svg");
+    background-image: url("../../../assets/icons/MainCategories/Advantages/return.svg");
     left: -37px;
     background-repeat: no-repeat;
 }
@@ -41,7 +41,7 @@
     position: absolute;
     width: 32px;
     height: 32px;
-    background-image: url("./../../../icons/MainCategories/Advantages/support.svg");
+    background-image: url("../../../assets/icons/MainCategories/Advantages/support.svg");
     left: -37px;
     background-repeat: no-repeat;
 }

@@ -18,7 +18,7 @@
 .phone::before{
     content: '';
     position: absolute;
-    background-image: url("./../../../../icons/Header/TopHeader/Data/phone.svg");
+    background-image: url("../../../../assets/icons/Header/TopHeader/Data/phone.svg");
     width: 11px;
     height: 11px;
     left: -15px;
@@ -28,7 +28,7 @@
 .address::before{
     content: '';
     position: absolute;
-    background-image: url("./../../../../icons/Header/TopHeader/Data/address.svg");
+    background-image: url("../../../../assets/icons/Header/TopHeader/Data/address.svg");
     width: 11px;
     height: 11px;
     left: -15px;
@@ -38,7 +38,7 @@
 .working-time::before{
     content: '';
     position: absolute;
-    background-image: url("./../../../../icons/Header/TopHeader/Data/time.svg");
+    background-image: url("../../../../assets/icons/Header/TopHeader/Data/time.svg");
     width: 11px;
     height: 11px;
     left: -15px;

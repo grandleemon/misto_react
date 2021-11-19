@@ -1,7 +1,7 @@
 import React from 'react';
 import './OrderPage.css'
 import {useSelector} from "react-redux";
-import {getCartItems} from "../../../features/cart/cartSlice";
+import {getCartItems} from "../../../app/features/cart/cartSlice";
 import OrderItem from "./OrderItem/OrderItem";
 import {calcTotalPrice} from "../../utils/calcTotalPrice";
 

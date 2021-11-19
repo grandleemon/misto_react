@@ -61,5 +61,21 @@
     display: none;
 }
 
+@media (max-width: 1430px) {
+    .logo__name a{
+        font-size: 38px;
+        font-weight: 800;
+    }
+    .menu__list a{
+        font-size: 13px;
+        padding: 27px 29px 25px 29px;
+    }
+    .header__buttons div{
+        width: 16px;
+        height: 16px;
+        margin-bottom: 10px;
+    }
+}
+
 
 

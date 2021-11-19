@@ -25,6 +25,7 @@ export const slice = createSlice({
             state.cartItems = state.cartItems.filter(
                 cartItem => cartItem.id !== action.payload.card.id
             )
+            state.totalPrice -= action.payload.card.price
         },
         addToTotalPrice: (state, action) => {
             debugger

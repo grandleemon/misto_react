@@ -1,9 +1,9 @@
 import React from 'react';
 import './Feedback.css'
-import facebook_icon from "../../icons/Header/TopHeader/SocialLinks/facebook.svg";
-import twitter_icon from "../../icons/Header/TopHeader/SocialLinks/twitter.svg";
-import pinterest_icon from "../../icons/Header/TopHeader/SocialLinks/pinterest.svg";
-import instagram_icon from "../../icons/Header/TopHeader/SocialLinks/instagram.svg";
+import facebook_icon from "../../assets/icons/Header/TopHeader/SocialLinks/facebook.svg";
+import twitter_icon from "../../assets/icons/Header/TopHeader/SocialLinks/twitter.svg";
+import pinterest_icon from "../../assets/icons/Header/TopHeader/SocialLinks/pinterest.svg";
+import instagram_icon from "../../assets/icons/Header/TopHeader/SocialLinks/instagram.svg";
 
 const Feedback = () => {
     return (

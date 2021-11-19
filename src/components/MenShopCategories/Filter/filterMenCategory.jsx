@@ -1,7 +1,7 @@
 import React from 'react';
 import './filterMenCategory.css'
 import {useDispatch, useSelector} from "react-redux";
-import {filterCategory, getSelectedCategory} from "../../../features/menCategory/menCategorySlice";
+import {filterCategory, getSelectedCategory} from "../../../app/features/menCategory/menCategorySlice";
 
 const FilterMenCategory = ({category}) => {
     const dispatch = useDispatch();

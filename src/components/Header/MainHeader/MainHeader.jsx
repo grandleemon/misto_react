@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import './MainHeader.css'
-import search_icon from './../../../icons/Header/MainHeader/search.svg'
-import localization_icon from './../../../icons/Header/MainHeader/globe.svg'
-import user_icon from './../../../icons/Header/MainHeader/user.svg'
-import cart_icon from './../../../icons/Header/MainHeader/cart.svg'
+import search_icon from '../../../assets/icons/Header/MainHeader/search.svg'
+import localization_icon from '../../../assets/icons/Header/MainHeader/globe.svg'
+import user_icon from '../../../assets/icons/Header/MainHeader/user.svg'
+import cart_icon from '../../../assets/icons/Header/MainHeader/cart.svg'
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import MenuMen from "../DropdownMenu/DropdownMenuCategories/MenuMen";
 import Localization from "../Modals/Localization/Localization";
