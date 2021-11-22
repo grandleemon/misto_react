@@ -98,13 +98,13 @@
     font-size: 16px;
 }
 
-@media (max-width: 320px) {
+@media screen and (max-width: 479px) {
     .special__offersBackground::before, .special__offersBackground::after{
         display: none;
     }
     .offer{
         padding: 40px 48px 48px 48px;
-        width: 300px;
+        width: 100%;
     }
     .offer__content{
         font-size: 16px;

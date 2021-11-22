@@ -62,7 +62,7 @@
     opacity: 0.9;
 }
 
-@media (max-width: 320px) {
+@media screen and (max-width: 479px) {
     .advantages {
         display: grid;
         row-gap: 15px;

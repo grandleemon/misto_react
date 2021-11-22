@@ -29,9 +29,22 @@
     opacity: 0.8;
 }
 
-@media screen and (max-width: 479px) {
+@media (max-width: 320px) {
     .footer__nav {
         grid-template-columns: repeat(1, 250px);
+        row-gap: 30px;
+    }
+    .footer h2, .footer a{
+        font-size: 12px;
+    }
+    .footer ul li{
+        margin-bottom: 9px;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 479px) {
+    .footer__nav {
+        grid-template-columns: repeat(2, 200px);
         row-gap: 30px;
     }
     .footer h2, .footer a{

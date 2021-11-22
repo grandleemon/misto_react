@@ -15,7 +15,7 @@
     font-weight: 600;
 }
 
-@media (max-width: 320px) {
+@media screen and (max-width: 479px) {
     .women__section{
         padding-top: 30px;
     }

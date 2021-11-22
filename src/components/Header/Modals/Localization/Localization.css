@@ -64,7 +64,7 @@
     cursor: pointer;
 }
 
-@media (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
     .localization{
         width: 100%;
         overflow-y: scroll;

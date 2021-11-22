@@ -59,13 +59,13 @@
 .content__title span{
     color: #E91E63;
 }
-@media (max-width: 320px) {
+@media screen and (max-width: 479px) {
     .news{
         margin-top: 60px;
     }
     .news__item, .new__season, .sale{
         width: 100%;
         height: 150px;
-        background-size: contain;
+        background-size: cover;
     }
 }
