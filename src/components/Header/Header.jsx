@@ -1,7 +1,7 @@
 import React from 'react';
-import './Header.css'
 import MainHeader from "./MainHeader/MainHeader";
 import TopHeader from "./TopHeader/TopHeader";
+import './Header.css'
 
 
 const Header = () => {
@@ -13,14 +13,9 @@ const Header = () => {
                         <TopHeader />
                     </div>
                 </div>
-
                 <div className="main__header-background">
                         <MainHeader/>
                 </div>
-
-
-
-
             </header>
         </div>
     );

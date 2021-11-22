@@ -44,7 +44,11 @@
     margin-bottom: 150px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 376px) {
+    .blog__articles {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, 250px);
+    }
     .title {
         font-size: 16px;
     }
@@ -53,10 +57,16 @@
     }
 }
 
-@media (min-width: 321px) and (max-width: 479px) {
+@media (min-width: 377px) and (max-width: 479px) {
     .blog__articles {
         grid-template-columns: 100%;
         grid-template-rows: repeat(4, 250px);
-        row-gap: 150px;
+        row-gap: 100px;
+    }
+    .title {
+        font-size: 16px;
+    }
+    .link a{
+        font-size: 10px;
     }
 }

@@ -68,7 +68,7 @@
     margin-right: 0;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 376px) {
     .feedback__form{
         width: 100%;
     }
@@ -86,12 +86,12 @@
     }
 }
 
-@media (min-width: 321px) and (max-width: 479px) {
+@media (min-width: 377px) and (max-width: 479px) {
     .feedback__form{
         width: 100%;
     }
     .feedback__form input{
-        width: 80%;
+        width: 70%;
     }
     .feedback__socials{
         display: none;

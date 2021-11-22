@@ -29,7 +29,7 @@
     opacity: 0.8;
 }
 
-@media (max-width: 320px) {
+@media screen and (max-width: 376px) {
     .footer__nav {
         grid-template-columns: repeat(1, 250px);
         row-gap: 30px;
@@ -42,13 +42,13 @@
     }
 }
 
-@media (min-width: 321px) and (max-width: 479px) {
+@media (min-width: 377px) and (max-width: 479px) {
     .footer__nav {
-        grid-template-columns: repeat(2, 200px);
+        grid-template-columns: repeat(2, 170px);
         row-gap: 30px;
     }
     .footer h2, .footer a{
-        font-size: 12px;
+        font-size: 11px;
     }
     .footer ul li{
         margin-bottom: 9px;

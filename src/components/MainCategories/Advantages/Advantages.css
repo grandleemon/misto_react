@@ -68,3 +68,16 @@
         row-gap: 15px;
     }
 }
+
+@media (min-width: 480px) and (max-width: 767px){
+    .advantages{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 150px);
+    }
+    .shipping__content, .return__content, .support__content{
+        font-size: 10px;
+    }
+    .shipping__title, .return__title, .support__title{
+        font-size: 10px;
+    }
+}
