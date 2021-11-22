@@ -32,14 +32,14 @@
 
 @media screen and (max-width: 479px) {
     header{
-        width: 100vw;
+        width: 100%;
     }
     .background, .top__header{
         display: none;
     }
     .main__header-background{
         margin-top: 0;
-        width: 100vw;
+        width: 100%;
     }
 }
 

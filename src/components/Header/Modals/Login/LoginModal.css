@@ -161,4 +161,11 @@ form input[type=submit]{
     transition: .5s;
 }
 
+@media screen and (max-width: 479px) {
+    .login{
+        width: 100%;
+        overflow-y: scroll;
+    }
+}
+
 

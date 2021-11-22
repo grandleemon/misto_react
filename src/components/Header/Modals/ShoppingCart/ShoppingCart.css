@@ -85,6 +85,13 @@
     opacity: 0.8;
 }
 
+@media screen and (max-width: 479px) {
+    .shopping-cart{
+        width: 100%;
+        overflow-y: scroll;
+    }
+}
+
 
 
 
