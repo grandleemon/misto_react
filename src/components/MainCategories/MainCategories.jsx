@@ -1,8 +1,8 @@
 import React from 'react';
-import './MainCategories.css'
 import Categories from "./Categories/Categories";
 import Slider from "./Slider/Slider";
 import Advantages from "./Advantages/Advantages";
+import './MainCategories.css'
 
 
 const MainCategories = () => {

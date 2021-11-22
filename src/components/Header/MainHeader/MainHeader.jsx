@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './MainHeader.css'
 import search_icon from '../../../assets/icons/Header/MainHeader/search.svg'
 import localization_icon from '../../../assets/icons/Header/MainHeader/globe.svg'
 import user_icon from '../../../assets/icons/Header/MainHeader/user.svg'
@@ -11,6 +10,7 @@ import SearchModal from "../Modals/Search/SearchModal";
 import LoginModal from "../Modals/Login/LoginModal";
 import ShoppingCart from "../Modals/ShoppingCart/ShoppingCart";
 import { Link } from "react-router-dom";
+import './MainHeader.css'
 
 
 

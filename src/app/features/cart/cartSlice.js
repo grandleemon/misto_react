@@ -34,12 +34,13 @@ export const slice = createSlice({
         removeFromTotalPrice: (state, action) => {
             state.totalPrice -= action.payload;
         }
+
     }
 })
 
 export const getCartItems = state => state.cart.cartItems;
 export const getTotalPrice = state => state.cart.totalPrice;
 
-export const {addItemToCart, removeItemFromCart, addToTotalPrice, removeFromTotalPrice, addToCardPrice} = slice.actions
+export const {addItemToCart, removeItemFromCart, addToTotalPrice, removeFromTotalPrice} = slice.actions
 
 export default slice.reducer;

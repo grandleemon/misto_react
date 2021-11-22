@@ -77,5 +77,18 @@
     }
 }
 
+@media screen and (max-width: 479px) {
+    .logo__name a {
+        font-size: 28px;
+    }
+    .menu__list a{
+        display: none;
+    }
+    .header__buttons div{
+        width: 10px;
+        height: 10px;
+    }
+}
+
 
 

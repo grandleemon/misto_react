@@ -30,6 +30,19 @@
     transition: .5s;
 }
 
+@media screen and (max-width: 479px) {
+    header{
+        width: 100vw;
+    }
+    .background, .top__header{
+        display: none;
+    }
+    .main__header-background{
+        margin-top: 0;
+        width: 100vw;
+    }
+}
+
 
 
 

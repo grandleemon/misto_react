@@ -14,6 +14,7 @@
     height: 260px;
     background-image: url("../../assets/images/NewsSection/new collection.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,6 +26,7 @@
     height: 260px;
     background-image: url("../../assets/images/NewsSection/sale.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,4 +58,14 @@
 }
 .content__title span{
     color: #E91E63;
+}
+@media (max-width: 320px) {
+    .news{
+        margin-top: 60px;
+    }
+    .news__item, .new__season, .sale{
+        width: 100%;
+        height: 150px;
+        background-size: contain;
+    }
 }

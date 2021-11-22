@@ -2,14 +2,19 @@
 .categories{
     width: 50%;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, 50%);
     grid-template-rows: 50% 50%;
-    margin-right: -30px;
+    grid-template-areas:
+                    "col-1 col-2"
+                    "row-1 row-1";
+    column-gap: 10px;
+    row-gap: 9px;
 }
 
 .women__category{
-    width: 370px;
-    height: 342px;
+    grid-area: col-1;
+    width: 100%;
+    height: 100%;
     background-image: url("../../../assets/images/Header/MainCategories/Categories/women.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -71,8 +76,9 @@
 }
 
 .men__category{
-    width: 355px;
-    height: 342px;
+    grid-area: col-2;
+    width: 100%;
+    height: 100%;
     background-image: url("../../../assets/images/Header/MainCategories/Categories/men.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -85,8 +91,9 @@
 }
 
 .accessories__category{
-    width: 738px;
-    height: 352px;
+    grid-area: row-1;
+    width: 100%;
+    height: 97.6%;
     background-image: url("../../../assets/images/Header/MainCategories/Categories/accessories.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -107,8 +114,34 @@
     padding: 13px 24px;
 }
 
-@media (max-width: 1430px ) {
+@media (max-width: 320px ) {
+    .categories{
+        width: 100%;
+        grid-template-columns: 300px;
+        grid-template-areas:
+                "col-1"
+                "col-2"
+                "row-1";
+        row-gap: 9px;
+        grid-template-rows: none;
+    }
+    .categories a{
+        margin-top: 9px;
+        width: 300px;
+        height: 300px;
+    }
+    .women__category{
+        width: 300px;
+        height: 300px;
+    }
+    .men__category{
+        height: 300px;
+        width: 300px;
+    }
     .accessories__category{
-        width: 638px;
+        width: 300px;
+        height: 300px;
+        -ms-background-position-y: 0;
+        background-position-y: 0;
     }
 }

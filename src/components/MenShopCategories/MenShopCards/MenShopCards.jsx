@@ -8,18 +8,17 @@ import {getMenItems, getSelectedCategory} from "../../../app/features/menCategor
 const MenShopCards = () => {
     const menCards = useSelector(getMenItems)
     const selectedCategory = useSelector(getSelectedCategory)
-    const renderedItems = menCards
-        .filter(card => {
-            if(selectedCategory === "all") return true;
-            return selectedCategory === card.sortCategory
-        })
-        .map(card => {
-            return <Card card={card} />
-        })
     return (
         <div>
             <div className="shopping__cards">
-                {renderedItems}
+                {menCards
+                    .filter(card => {
+                        if(selectedCategory === "all") return true;
+                        return selectedCategory === card.sortCategory
+                    })
+                    .map(card => {
+                        return <Card card={card} />
+                    })}
             </div>
             <Button />
         </div>

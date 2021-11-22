@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import './Slider.css'
 import {SliderData} from "./SliderData";
+import './Slider.css'
 
 const Slider = () => {
     const [current, setCurrent] = useState(0)
@@ -13,7 +13,7 @@ const Slider = () => {
         setCurrent(current === 0 ? length - 1 : current -1)
     }
 
-    if(!Array.isArray(SliderData) || SliderData.length <= 0){
+    if(!Array.isArray(SliderData) || length <= 0){
         return null;
     }
 

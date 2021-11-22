@@ -1,21 +1,19 @@
 import React, {useState} from 'react';
-import './ShoppingCartCard.css'
 import deleteIcon from '../../../../../assets/icons/Header/MainHeader/ShopppingCartCard/delete-icon.svg'
 import {useDispatch, useSelector} from "react-redux";
 import {
-    addToCardPrice,
     addToTotalPrice,
-    getTotalPrice,
     removeFromTotalPrice,
     removeItemFromCart
 } from "../../../../../app/features/cart/cartSlice";
+import './ShoppingCartCard.css'
 
 
 
 
-const ShoppingCartCard = ({card}) => {
+const ShoppingCartCard = ({card, quantity, setQuantity}) => {
     const dispatch = useDispatch()
-    const [quantity, setQuantity] = useState(1)
+
     const price = () => {
         if(quantity === 1){
             return "$ " + card.price.toFixed(2)
@@ -31,6 +29,10 @@ const ShoppingCartCard = ({card}) => {
         if(quantity <= 1) return;
         setQuantity(quantity - 1)
         dispatch(removeFromTotalPrice(card.price))
+    }
+    const handleClick = () => {
+        dispatch(removeItemFromCart({card}))
+        setQuantity(1)
     }
 
 
@@ -62,7 +64,7 @@ const ShoppingCartCard = ({card}) => {
                             {price()}
                         </div>
 
-                        <div className="shopping__cart-card-delete" onClick={ () => dispatch(removeItemFromCart({card}))}>
+                        <div className="shopping__cart-card-delete" onClick={ handleClick}>
                             <img src={deleteIcon} alt=""/>
                         </div>
 

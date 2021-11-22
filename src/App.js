@@ -1,12 +1,12 @@
 import React from 'react'
-import './App.css'
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import { Routes, Route } from "react-router-dom";
 import Women from "./components/pages/WomenPage/women";
 import HomePage from "./components/pages/homePage";
 import ProductPage from "./components/pages/ProductPage/ProductPage";
 import OrderPage from "./components/pages/OrderPage/OrderPage";
+import './App.css'
 
 
 

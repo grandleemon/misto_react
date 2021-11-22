@@ -5,12 +5,11 @@ import "typeface-spartan"
 import "typeface-playfair-display"
 import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
-
-import store2 from './app/store'
+import store from './app/store'
 
 ReactDOM.render(
     <BrowserRouter >
-        <Provider store={store2}>
+        <Provider store={store}>
             <App />
         </Provider>
     </BrowserRouter>,

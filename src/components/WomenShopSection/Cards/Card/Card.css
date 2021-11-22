@@ -1,9 +1,7 @@
 .card{
     cursor: pointer;
-    width: 16.7%;
+    width: 255px;
     height: 318px;
-    margin-bottom: 80px;
-    margin-left: 4.1%;
 }
 
 .card:nth-child(5n+1){

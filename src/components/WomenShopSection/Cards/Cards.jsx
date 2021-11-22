@@ -11,18 +11,17 @@ import './Cards.css'
 const Cards = () => {
     const womenCards = useSelector((state => state.womenCategory.womenCategoryItems))
     const selectedCategory = useSelector(getSelectedCategory)
-    const renderedItems = womenCards
-        .filter( card => {
-            if(selectedCategory === "all") return true;
-            return selectedCategory === card.sortCategory
-        })
-        .map( card => {
-        return <Card card={card} />
-    } )
     return (
         <div>
             <div className="shopping__cards">
-                {renderedItems}
+                {womenCards
+                    .filter( card => {
+                        if(selectedCategory === "all") return true;
+                        return selectedCategory === card.sortCategory
+                    })
+                    .map( card => {
+                        return <Card card={card} />
+                    } )}
             </div>
             <Button />
         </div>

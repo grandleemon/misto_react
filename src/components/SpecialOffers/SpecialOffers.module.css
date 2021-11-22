@@ -1,5 +1,5 @@
 .special__offersBackground{
-    min-height: 580px;
+    height: 580px;
     background: linear-gradient(180deg, #F3F2F2 0%, #DCDBDB 100%);
     display: flex;
     align-items: center;
@@ -38,7 +38,6 @@
     padding: 80px 96px 96px 96px;
     background-color: #fff;
     text-align: center;
-
 }
 
 .offer__type{
@@ -58,6 +57,12 @@
     font-weight: 600;
     font-size: 26px;
     line-height: 36px;
+}
+
+.subscribing__form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .subscribing__form input{
@@ -91,4 +96,27 @@
     text-transform: uppercase;
     font-weight: 500;
     font-size: 16px;
+}
+
+@media (max-width: 320px) {
+    .special__offersBackground::before, .special__offersBackground::after{
+        display: none;
+    }
+    .offer{
+        padding: 40px 48px 48px 48px;
+        width: 300px;
+    }
+    .offer__content{
+        font-size: 16px;
+    }
+    .subscribing__form input{
+        width: 100%;
+        font-size: 11px;
+        padding: 23px 50px;
+    }
+    .subscribing__form button{
+        width: 100%;
+        font-size: 11px;
+        padding: 23px 50px;
+    }
 }

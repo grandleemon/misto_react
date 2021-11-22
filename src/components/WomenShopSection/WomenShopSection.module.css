@@ -14,3 +14,15 @@
     font-size: 22px;
     font-weight: 600;
 }
+
+@media (max-width: 320px) {
+    .women__section{
+        padding-top: 30px;
+    }
+    .category__title {
+        font-size: 14px;
+    }
+    .sorting__categories{
+        display: none;
+    }
+}

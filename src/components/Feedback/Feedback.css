@@ -67,3 +67,18 @@
 .feedback__socials ul li:last-child{
     margin-right: 0;
 }
+
+@media (max-width: 320px) {
+    .feedback__form input{
+        width: 220px;
+    }
+    .feedback__socials{
+        display: none;
+    }
+    .feedback__subtitle{
+        display: none;
+    }
+    .feedback__form button{
+        padding: 0;
+    }
+}

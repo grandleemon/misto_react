@@ -1,6 +1,15 @@
 .shopping__cards{
     padding-top: 48px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 255px);
+    gap: 90px 60px;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+@media (max-width: 320px) {
+    .shopping__cards{
+        padding-top: 20px;
+    }
 }
 

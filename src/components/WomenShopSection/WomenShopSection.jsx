@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './WomenShopSection.module.css'
 import Cards from "./Cards/Cards";
 import Filter from "./Filter/Filter";
+import styles from './WomenShopSection.module.css'
 
 const WomenShopSection = () => {
 

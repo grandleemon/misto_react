@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from "../WomenShopSection/WomenShopSection.module.css";
-import "./MenShopCategories.css"
 import MenShopCards from "./MenShopCards/MenShopCards";
 import FilterMenCategory from "./Filter/filterMenCategory";
+import styles from "../WomenShopSection/WomenShopSection.module.css";
+import "./MenShopCategories.css"
 
 const MenShopCategories = () => {
     return (

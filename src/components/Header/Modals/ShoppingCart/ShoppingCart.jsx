@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useSelector} from "react-redux";
 import {useClickOutside} from "../../../UI/hooks/useClickOutside";
 import {useNavigate} from "react-router-dom";
@@ -8,17 +8,16 @@ import './ShoppingCart.css'
 import {calcTotalPrice} from "../../../utils/calcTotalPrice";
 
 const ShoppingCart = (props) => {
-
+    const [quantity, setQuantity] = useState(1)
     // let cart = useSelector((state => state.shoppingCart))
     // let renderedItems = cart.map(card => {
     //     return <ShoppingCartCard id={card.id} image={card.image} cardPrice={card.price} title={card.title} color={card.color} size={card.size}/>
     // })
 
     const cartItems = useSelector(getCartItems)
-    const totalPrice = calcTotalPrice(cartItems)
-    const totalPrice2 = useSelector(getTotalPrice)
+    const totalPrice = useSelector(getTotalPrice)
     const renderedItems = cartItems.map(card => {
-        return <ShoppingCartCard card={card} totalPrice={totalPrice}  />
+        return <ShoppingCartCard card={card} quantity={quantity} setQuantity={setQuantity}/>
     })
 
     const domNode = useClickOutside(() => {
@@ -46,7 +45,7 @@ const ShoppingCart = (props) => {
                         <div className="shopping__cart-total">
                             <div className="total-price">
                                 <div className="total">Total</div>
-                                <div className="price">$ {totalPrice2.toFixed(2)}</div>
+                                <div className="price">$ {totalPrice.toFixed(2)}</div>
                             </div>
 
                             <button onClick={handleClick}>Check Out</button>

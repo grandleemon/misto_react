@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './Blog.module.css'
 import articleImage1 from '../../assets/images/Blog/article-break.jpg'
 import articleImage2 from '../../assets/images/Blog/article-wedding.jpg'
 import articleImage3 from '../../assets/images/Blog/article-favorites.jpg'
 import ArticleCard from "./ArticleCard/ArticleCard";
+import styles from './Blog.module.css'
 
 
 const Blog = () => {

@@ -61,3 +61,10 @@
     color: #121212;
     opacity: 0.9;
 }
+
+@media (max-width: 320px) {
+    .advantages {
+        display: grid;
+        row-gap: 15px;
+    }
+}

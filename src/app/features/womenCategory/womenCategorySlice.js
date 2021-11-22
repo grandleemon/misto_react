@@ -14,7 +14,10 @@ const slice = createSlice({
             {id: 2, sortCategory: "bestsellers", cardImage: card2Image, colorVariants: card2Image, cardTitle: "Cluse La Boheme Rose Gold", cardPrice: 52.00, quantity: 1},
             {id: 3, sortCategory: "specials", cardImage: card3Image, colorVariants: card3Image, cardTitle: "Mercury Tee", cardPrice: 108.00, quantity: 1},
             {id: 4, sortCategory: "most viewed", cardImage: card4Image, colorVariants: card4Image, cardTitle: "Skin Sweatpans", cardPrice: 297.00, quantity: 1},
-            {id: 5, sortCategory: "new arrivals", cardImage: card5Image, colorVariants: card5Image, cardTitle: "Cream women pants", cardPrice: 65.00, quantity: 1}
+            {id: 5, sortCategory: "new arrivals", cardImage: card5Image, colorVariants: card5Image, cardTitle: "Cream women pants", cardPrice: 65.00, quantity: 1},
+            {id: 6, sortCategory: "most viewed", cardImage: card5Image, colorVariants: card5Image, cardTitle: "Cream women pants", cardPrice: 65.00, quantity: 1},
+            {id: 7, sortCategory: "specials", cardImage: card5Image, colorVariants: card5Image, cardTitle: "Cream women pants", cardPrice: 65.00, quantity: 1},
+            {id: 8, sortCategory: "bestsellers", cardImage: card5Image, colorVariants: card5Image, cardTitle: "Cream women pants", cardPrice: 65.00, quantity: 1}
             ],
         selectedSortCategory: 'all'
     },

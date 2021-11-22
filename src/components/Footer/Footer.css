@@ -1,10 +1,11 @@
 .footer{
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .footer__nav{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 380px);
 }
 
 .footer h2{
@@ -26,4 +27,17 @@
     font-weight: 400;
     color: #121212;
     opacity: 0.8;
+}
+
+@media screen and (max-width: 479px) {
+    .footer__nav {
+        grid-template-columns: repeat(1, 250px);
+        row-gap: 30px;
+    }
+    .footer h2, .footer a{
+        font-size: 12px;
+    }
+    .footer ul li{
+        margin-bottom: 9px;
+    }
 }
