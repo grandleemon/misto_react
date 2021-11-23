@@ -11,7 +11,8 @@ import './ShoppingCartCard.css'
 
 
 
-const ShoppingCartCard = ({card, quantity, setQuantity}) => {
+const ShoppingCartCard = ({card}) => {
+    const [quantity, setQuantity] = useState(1)
     const dispatch = useDispatch()
 
     const price = () => {

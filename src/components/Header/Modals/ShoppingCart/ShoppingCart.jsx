@@ -8,7 +8,7 @@ import './ShoppingCart.css'
 import {calcTotalPrice} from "../../../utils/calcTotalPrice";
 
 const ShoppingCart = (props) => {
-    const [quantity, setQuantity] = useState(1)
+
     // let cart = useSelector((state => state.shoppingCart))
     // let renderedItems = cart.map(card => {
     //     return <ShoppingCartCard id={card.id} image={card.image} cardPrice={card.price} title={card.title} color={card.color} size={card.size}/>
@@ -17,7 +17,7 @@ const ShoppingCart = (props) => {
     const cartItems = useSelector(getCartItems)
     const totalPrice = useSelector(getTotalPrice)
     const renderedItems = cartItems.map(card => {
-        return <ShoppingCartCard card={card} quantity={quantity} setQuantity={setQuantity}/>
+        return <ShoppingCartCard card={card}/>
     })
 
     const domNode = useClickOutside(() => {

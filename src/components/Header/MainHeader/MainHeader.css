@@ -61,6 +61,27 @@
     display: none;
 }
 
+.main__header-link{
+    cursor: pointer;
+    position: relative;
+}
+
+.main__header-link .total__products{
+    width: 14px;
+    height: 14px;
+    color: white;
+    background-color: #121212;
+    font-size: 9px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2px;
+    font-weight: 700;
+}
 @media (max-width: 1430px) {
     .logo__name a{
         font-size: 38px;
@@ -89,6 +110,8 @@
         height: 10px;
     }
 }
+
+
 
 @media (min-width: 480px) and (max-width: 767px) {
     .logo__name a {

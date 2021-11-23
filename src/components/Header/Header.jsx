@@ -2,9 +2,12 @@ import React from 'react';
 import MainHeader from "./MainHeader/MainHeader";
 import TopHeader from "./TopHeader/TopHeader";
 import './Header.css'
+import {useSelector} from "react-redux";
+import {getCartItems} from "../../app/features/cart/cartSlice";
 
 
 const Header = () => {
+    const cartItems = useSelector(getCartItems)
     return (
         <div>
             <header>
@@ -14,7 +17,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="main__header-background">
-                        <MainHeader/>
+                        <MainHeader cartItems={cartItems}/>
                 </div>
             </header>
         </div>

@@ -11,14 +11,15 @@ import LoginModal from "../Modals/Login/LoginModal";
 import ShoppingCart from "../Modals/ShoppingCart/ShoppingCart";
 import { Link } from "react-router-dom";
 import './MainHeader.css'
+import {useSelector} from "react-redux";
+import {getCartItems} from "../../../app/features/cart/cartSlice";
 
 
 
 
 class MainHeader extends React.Component  {
-
-constructor() {
-    super();
+constructor(props) {
+    super(props);
     this.state = {
         womenHovered: false,
         menHovered: false,
@@ -142,9 +143,13 @@ render(){
                             </a>
                         </div>
                         <div>
-                            <a href="#" onClick={this.setShoppingCartModal}>
+                            <div className="main__header-link" onClick={this.setShoppingCartModal}>
                                 <img src={cart_icon} alt=""/>
-                            </a>
+                                {this.props.cartItems.length ? <div className="total__products">
+                                    {this.props.cartItems.length}
+                                </div> : null}
+
+                            </div>
                         </div>
                     </div>
                 </div>
