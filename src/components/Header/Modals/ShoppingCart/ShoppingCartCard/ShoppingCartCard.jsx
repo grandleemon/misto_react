@@ -1,19 +1,17 @@
 import React, {useState} from 'react';
 import deleteIcon from '../../../../../assets/icons/Header/MainHeader/ShopppingCartCard/delete-icon.svg'
 import {useDispatch, useSelector} from "react-redux";
-import {
-    addToTotalPrice,
-    removeFromTotalPrice,
-    removeItemFromCart
-} from "../../../../../app/features/cart/cartSlice";
+import {removeItemFromCart, setItemQuantity} from "../../../../../app/features/cart/cartSlice";
 import './ShoppingCartCard.css'
 
 
 
 
 const ShoppingCartCard = ({card}) => {
-    const [quantity, setQuantity] = useState(1)
     const dispatch = useDispatch()
+    const { id, quantity} = card
+
+    const setQuantity = quantity => dispatch(setItemQuantity({ id, quantity}))
 
     const price = () => {
         if(quantity === 1){
@@ -24,16 +22,13 @@ const ShoppingCartCard = ({card}) => {
     }
     const inc = () => {
         setQuantity(quantity + 1)
-        dispatch(addToTotalPrice(card.price))
     }
     const dec = () => {
         if(quantity <= 1) return;
         setQuantity(quantity - 1)
-        dispatch(removeFromTotalPrice(card.price))
     }
-    const handleClick = () => {
-        dispatch(removeItemFromCart({card}))
-        setQuantity(1)
+    const handleDelete = () => {
+        dispatch(removeItemFromCart(id))
     }
 
 
@@ -65,7 +60,7 @@ const ShoppingCartCard = ({card}) => {
                             {price()}
                         </div>
 
-                        <div className="shopping__cart-card-delete" onClick={ handleClick}>
+                        <div className="shopping__cart-card-delete" onClick={ handleDelete}>
                             <img src={deleteIcon} alt=""/>
                         </div>
 
