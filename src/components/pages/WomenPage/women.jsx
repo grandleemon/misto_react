@@ -1,23 +1,21 @@
 import React from 'react';
 import Card from "../../WomenShopSection/Cards/Card/Card";
 import {useSelector} from "react-redux";
-import {getWomenPageItems} from "../../../app/features/womenPage/womenPageSlice";
 import Feedback from "../../Feedback/Feedback";
 import './women.css'
 
 const Women = () => {
-    const womenPageItems = useSelector(getWomenPageItems)
-    const renderedItems = womenPageItems.map(
-        card => {return <Card card={card}/>}
-    )
+    const womenCards = useSelector((state => state.womenCategory.womenCategoryItems))
+
     return (
-        <div>
+        <div className="women__page">
+            <div className="women__page-title">women</div>
             <div className="wrapper">
-                <div className="women__page-cards">
-                    {renderedItems}
+                <div className="women__page shopping__cards">
+                    {womenCards.map(
+                    card => {return <Card card={card}/>}
+                    )}
                 </div>
-
-
             </div>
             <Feedback />
         </div>

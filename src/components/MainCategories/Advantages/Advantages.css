@@ -81,3 +81,31 @@
         font-size: 10px;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .advantages{
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fill, 250px);
+    }
+    .shipping__content, .return__content, .support__content{
+        font-size: 10px;
+    }
+    .shipping__title, .return__title, .support__title{
+        font-size: 10px;
+    }
+}
+
+@media ( min-width: 1024px) and (max-width: 1439px){
+    .advantages{
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fill, 250px);
+    }
+    .shipping__content, .return__content, .support__content{
+        font-size: 10px;
+    }
+    .shipping__title, .return__title, .support__title{
+        font-size: 10px;
+    }
+}

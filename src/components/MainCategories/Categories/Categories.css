@@ -153,3 +153,10 @@
         padding: 9px 20px;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .women__category-title, .men__category-title, .accessories__category-title{
+        font-size: 12px;
+        padding: 9px 20px;
+    }
+}

@@ -85,3 +85,33 @@
     margin-top: 12px;
     border: 1px solid #E6E6E6;
 }
+
+@media screen and (max-width: 374px) {
+    .shopping__cart-card-price{
+        width: 70px;
+        font-size: 12px;
+    }
+    .shopping__cart-card-delete{
+        margin-left: 0;
+        width: 14px;
+        height: 14px;
+    }
+    .shopping__cart-card-amount .remove, .add, .amount{
+        width: 20px;
+        height: 20px;
+    }
+    .shopping__cart-card-amount .add div{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@media (min-width: 375px) and (max-width: 424px) {
+    .shopping__cart-card-price{
+        width: 100px;
+        font-size: 12px;
+    }
+    .shopping__cart-card-delete{
+        margin-left: 0;
+    }
+}

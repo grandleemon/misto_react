@@ -4,13 +4,19 @@ import Button from "../../button/Button";
 import {useSelector} from "react-redux";
 import {getSelectedCategory} from "../../../app/features/womenCategory/womenCategorySlice";
 import './Cards.css'
+import {useNavigate} from "react-router-dom";
 
 
 
 
 const Cards = () => {
+    const navigate = useNavigate()
     const womenCards = useSelector((state => state.womenCategory.womenCategoryItems))
     const selectedCategory = useSelector(getSelectedCategory)
+
+    const handleClick = () => {
+        navigate("/women")
+    }
     return (
         <div>
             <div className="shopping__cards">
@@ -23,7 +29,7 @@ const Cards = () => {
                         return <Card card={card} />
                     } )}
             </div>
-            <Button />
+            <Button handleClick={handleClick} />
         </div>
     );
 };

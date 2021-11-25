@@ -56,6 +56,15 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 1024px){
+    header{
+        width: 100%;
+    }
+    .main__header-background{
+        width: 100%;
+    }
+}
+
 
 
 

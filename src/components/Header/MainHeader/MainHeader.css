@@ -126,5 +126,35 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+    .logo__name a {
+        font-size: 40px;
+    }
+    .menu__list a{
+        display: none;
+    }
+    .header__buttons div{
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media( min-width: 1024px ) and (max-width: 1439px){
+    .menu__list a{
+        font-size: 12px;
+        padding: 27px 29px 25px 29px;
+    }
+    .header__buttons div{
+        width: 10px;
+        height: 10px;
+    }
+    .logo__name a {
+        font-size: 40px;
+    }
+    .menu__list ul li:nth-child(1), .menu__list ul li:nth-child(6), .menu__list ul li:nth-child(7){
+        display: none;
+    }
+}
+
 
 

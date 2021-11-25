@@ -18,7 +18,6 @@
 }
 
 .slider img{
-    padding-top: 150px;
     width: 100%;
     height: 100%;
 }
@@ -26,6 +25,7 @@
 .slide.active{
     animation: slidein .9s forwards;
     position: relative;
+    width: 100%;
 }
 @keyframes slidein {
     from {
@@ -134,5 +134,39 @@
     }
     .slider__item-title{
         font-size: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .arrow{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .bestsellers{
+        height: 352px;
+    }
+    .slider__item-content{
+        padding: 10px 18px;
+    }
+    .slider__item-type{
+        font-size: 10px;
+        margin-bottom: 6px;
+    }
+    .slider__item-title{
+        font-size: 10px;
+    }
+}
+@media ( min-width: 1024px ) and (max-width: 1439px){
+    .arrow{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .bestsellers{
+        height: 500px;
+    }
+    .slider__item-type{
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    .slider__item-title{
+        font-size: 12px;
     }
 }

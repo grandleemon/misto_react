@@ -86,7 +86,7 @@
     }
 }
 
-@media (min-width: 377px) and (max-width: 479px) {
+@media (min-width: 377px) and (max-width: 767px) {
     .feedback__form{
         width: 100%;
     }
@@ -95,6 +95,24 @@
     }
     .feedback__socials{
         display: none;
+    }
+    .feedback__subtitle{
+        display: none;
+    }
+    .feedback__form button{
+        padding: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .feedback__form{
+        width: 100%;
+    }
+    .feedback__form input{
+        width: 70%;
+    }
+    .feedback__socials{
+        display: block;
     }
     .feedback__subtitle{
         display: none;
