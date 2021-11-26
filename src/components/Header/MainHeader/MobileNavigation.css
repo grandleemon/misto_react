@@ -1,0 +1,54 @@
+.mobile__navigation{
+    display: none;
+    padding-top: 8px;
+}
+
+.mobile__menu{
+    position: absolute;
+    background-color: #fff;
+    top: 50px;
+    height: 250px;
+    width: 100%;
+    padding-top: 15px;
+    left: 0;
+    padding-left: 10%;
+}
+
+.mobile__menu ul li{
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+.mobile__menu ul li:last-child{
+    margin-bottom: 0;
+}
+
+.mobile__menu ul li a{
+    color: #121212;
+    text-decoration: none;
+}
+
+@media (max-width: 990px) {
+    .mobile__navigation{
+        display: block;
+    }
+    .burger{
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile__menu{
+        top: 66px;
+    }
+    .burger{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 374px){
+    .burger{
+        width: 20px;
+        height: 20px;
+    }
+}

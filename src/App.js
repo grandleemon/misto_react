@@ -7,6 +7,7 @@ import HomePage from "./components/pages/homePage";
 import ProductPage from "./components/pages/ProductPage/ProductPage";
 import OrderPage from "./components/pages/OrderPage/OrderPage";
 import './App.css'
+import MenPage from "./components/pages/MenPage/MenPage";
 
 
 
@@ -18,6 +19,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="women" element={<Women />} />
+                <Route path="men" element={<MenPage />} />
                 <Route path="products/:title" element={<ProductPage />}/>
                 <Route path="order" element={<OrderPage />}/>
             </Routes>

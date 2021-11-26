@@ -3,7 +3,6 @@ import './OrderItem.css'
 import {useDispatch} from "react-redux";
 
 const OrderItem = ({card}) => {
-    const dispatch = useDispatch()
     return (
         <div className="order__item">
             <div className="order__item-image">
@@ -20,7 +19,7 @@ const OrderItem = ({card}) => {
                     Quantity: <span>{card.quantity}</span>
                 </div>
                 <div className="order__item-price">
-                    $ {card.price}
+                    $ {card.price * card.quantity}
                 </div>
             </div>
         </div>

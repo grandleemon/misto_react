@@ -1,13 +1,13 @@
 import React from 'react';
-import './OrderPage.css'
 import {useSelector} from "react-redux";
-import {getCartItems} from "../../../app/features/cart/cartSlice";
+import {getCardTotal, getCartItems} from "../../../app/features/cart/cartSlice";
 import OrderItem from "./OrderItem/OrderItem";
-import {calcTotalPrice} from "../../utils/calcTotalPrice";
+import './OrderPage.css'
+import Feedback from "../../Feedback/Feedback";
 
 const OrderPage = () => {
     const items = useSelector(getCartItems)
-
+    const totalPrice = useSelector(getCardTotal)
     return (
         <div className="order__page">
              <div className="wrapper">
@@ -19,7 +19,7 @@ const OrderPage = () => {
                      <div className="order__page-right">
                          <div className="order__page-totalPrice">
                         <span>
-                            Total: $ {calcTotalPrice(items)}
+                            Total: $ {totalPrice.toFixed(2)}
                         </span>
                              <div>
                                  <button>confirm</button>
@@ -29,6 +29,7 @@ const OrderPage = () => {
                  </div>
                      : <div className="emptyCart">The cart is empty</div>}
             </div>
+            <Feedback />
         </div>
     );
 };

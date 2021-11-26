@@ -158,7 +158,34 @@
     margin-bottom: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 767px) {
+    .product__page{
+        padding-top: 50px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1439px) {
+    .product__page{
+        padding-top: 88px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .product__price{
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1240px) and (max-width: 1439px){
+    .product__advantages{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 90%);
+        grid-template-rows: repeat(3, 30px);
+        row-gap: 20px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1023px) {
     .product__page-header div{
         font-size: 16px;
     }
@@ -202,7 +229,7 @@
 
 @media (min-width: 1024px ) and (max-width: 1439px) {
     .product__image img{
-        width: 350px;
+        width: 300px;
         height: 400px;
     }
 }
