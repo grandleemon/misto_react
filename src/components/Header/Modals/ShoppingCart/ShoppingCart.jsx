@@ -1,19 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useSelector} from "react-redux";
 import {useClickOutside} from "../../../UI/hooks/useClickOutside";
 import {useNavigate} from "react-router-dom";
 import ShoppingCartCard from "./ShoppingCartCard/ShoppingCartCard";
 import {getCardTotal, getCartItems} from "../../../../app/features/cart/cartSlice";
 import './ShoppingCart.css'
-import {calcTotalPrice} from "../../../utils/calcTotalPrice";
+
 
 const ShoppingCart = (props) => {
-
-    // let cart = useSelector((state => state.shoppingCart))
-    // let renderedItems = cart.map(card => {
-    //     return <ShoppingCartCard id={card.id} image={card.image} cardPrice={card.price} title={card.title} color={card.color} size={card.size}/>
-    // })
-
     const cartItems = useSelector(getCartItems)
     const totalPrice = useSelector(getCardTotal)
     const renderedItems = cartItems.map(card => {
