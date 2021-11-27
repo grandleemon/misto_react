@@ -1,0 +1,48 @@
+.registration__body input{
+    font-size: 14px;
+    margin-top: 25px;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    background-color: #F8F8F8;
+}
+.registration__body input:focus{
+    outline: none;
+}
+.registration__body button{
+    margin-top: 40px;
+    width: 100%;
+    padding: 17px;
+    background-color: #121212;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.06em;
+}
+
+.registration__body button:disabled{
+    background-color: rgba(18, 18, 18, 0.32);
+    cursor: default;
+}
+
+.registration__header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.registration__close-btn{
+    cursor: pointer;
+}
+
+.registration__error{
+    margin-top: 2px;
+    font-size: 12px;
+    color: rgba(255, 0, 0, 0.72);
+    position: absolute;
+}
+.password-error{
+    margin-top: 15px;
+}

@@ -6,10 +6,10 @@ import user_icon from '../../../assets/icons/Header/MainHeader/user.svg'
 import cart_icon from '../../../assets/icons/Header/MainHeader/cart.svg'
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import MenuMen from "../DropdownMenu/DropdownMenuCategories/MenuMen";
-import Localization from "../Modals/Localization/Localization";
-import SearchModal from "../Modals/Search/SearchModal";
-import LoginModal from "../Modals/Login/LoginModal";
-import ShoppingCart from "../Modals/ShoppingCart/ShoppingCart";
+import Localization from "../../Modals/Localization/Localization";
+import SearchModal from "../../Modals/Search/SearchModal";
+import LoginModal from "../../Modals/Login/LoginModal";
+import ShoppingCart from "../../Modals/ShoppingCart/ShoppingCart";
 import Navigation from "./Navigation";
 import MobileNavigation from "./MobileNavigation";
 import './MainHeader.css'

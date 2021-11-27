@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import {useClickOutside} from "../../../UI/hooks/useClickOutside";
-import {data} from '../../../../app/Data'
+import {useClickOutside} from "../../UI/hooks/useClickOutside";
+import {data} from '../../../app/Data'
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
-import {setCurrentProduct} from "../../../../app/features/products/productsSlice";
+import {setCurrentProduct} from "../../../app/features/products/productsSlice";
 import CloseIcon from '@mui/icons-material/Close';
 import './Search.css'
 

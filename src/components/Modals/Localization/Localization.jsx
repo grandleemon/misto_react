@@ -1,6 +1,6 @@
 import React from 'react';
 import './Localization.css'
-import {useClickOutside} from "../../../UI/hooks/useClickOutside";
+import {useClickOutside} from "../../UI/hooks/useClickOutside";
 
 
 const Localization = (props) => {

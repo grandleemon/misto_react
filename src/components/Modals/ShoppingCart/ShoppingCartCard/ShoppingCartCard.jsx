@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import deleteIcon from '../../../../../assets/icons/Header/MainHeader/ShopppingCartCard/delete-icon.svg'
+import deleteIcon from '../../../../assets/icons/Header/MainHeader/ShopppingCartCard/delete-icon.svg'
 import {useDispatch, useSelector} from "react-redux";
-import {removeItemFromCart, setItemQuantity} from "../../../../../app/features/cart/cartSlice";
+import {removeItemFromCart, setItemQuantity} from "../../../../app/features/cart/cartSlice";
 import './ShoppingCartCard.css'
 
 
