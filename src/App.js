@@ -8,7 +8,6 @@ import ProductPage from "./components/pages/ProductPage/ProductPage";
 import OrderPage from "./components/pages/OrderPage/OrderPage";
 import './App.css'
 import MenPage from "./components/pages/MenPage/MenPage";
-import {Navigate} from "react-router";
 
 
 
@@ -19,7 +18,6 @@ function App() {
         <main>
             <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/misto_react/" element={<Navigate to="/" />} />
                 <Route path="women" element={<Women />} />
                 <Route path="men" element={<MenPage />} />
                 <Route path="products/:title" element={<ProductPage />}/>
