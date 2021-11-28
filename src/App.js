@@ -17,7 +17,7 @@ function App() {
         <Header />
         <main>
             <Routes>
-                <Route path="/" element={<HomePage />} />
+                <Route path="/misto_react/" element={<HomePage />} />
                 <Route path="women" element={<Women />} />
                 <Route path="men" element={<MenPage />} />
                 <Route path="products/:title" element={<ProductPage />}/>
