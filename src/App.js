@@ -6,8 +6,8 @@ import Women from "./components/pages/WomenPage/women";
 import HomePage from "./components/pages/homePage";
 import ProductPage from "./components/pages/ProductPage/ProductPage";
 import OrderPage from "./components/pages/OrderPage/OrderPage";
-import './App.css'
 import MenPage from "./components/pages/MenPage/MenPage";
+import './App.css'
 
 
 
