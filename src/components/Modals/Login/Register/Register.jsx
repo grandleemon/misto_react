@@ -1,73 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import CloseIcon from '@mui/icons-material/Close';
+import {useInput} from "../../../UI/hooks/useInput";
 import "./Register.css"
 
-const useInput = ( initialValue, validations ) => {
-    const [value, setValue] = useState(initialValue)
-    const [isDirty, setDirty] = useState(false)
-    const valid = useValidation(value, validations)
 
-    const onChange = (e) => {
-        setValue(e.target.value)
-    }
-
-    const onBlur = (e) => {
-        setDirty(true)
-    }
-
-    return {
-        value,
-        onChange,
-        onBlur,
-        isDirty,
-        ...valid
-    }
-}
-
-const useValidation = (value, validations) => {
-    const [isEmpty, setEmpty] = useState(true)
-    const [minLengthError, setMinLengthError] = useState(false)
-    const [maxLengthError, setMaxLengthError] = useState(false)
-    const [emailError, setEmailError] = useState(false)
-    const [inputValid, setInputValid] = useState(false)
-
-
-    useEffect( () => {
-        debugger
-        for(const validation in validations){
-            switch (validation) {
-                case 'minLength':
-                    value.length < validations[validation] ? setMinLengthError(true) : setMinLengthError(false)
-                    break;
-                case 'isEmpty':
-                    value ? setEmpty(false) : setEmpty(true)
-                    break;
-                case 'maxLength':
-                    value.length > validations[validation] ? setMaxLengthError(true) : setMaxLengthError(false)
-                    break;
-                case 'isEmail':
-                    const re =
-                        /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-                    re.test(String(value).toLowerCase()) ? setEmailError(false) : setEmailError(true)
-            }
-        }
-    }, [value])
-
-    useEffect( () => {
-            if(isEmpty || maxLengthError || minLengthError || emailError){
-                setInputValid(false)
-            } else {
-                setInputValid(true)
-            }
-    }, [isEmpty, maxLengthError, minLengthError, emailError])
-    return {
-        isEmpty,
-        minLengthError,
-        emailError,
-        maxLengthError,
-        inputValid
-    }
-}
 
 const Register = ({setIsRegistrationOpen}) => {
 
@@ -93,7 +29,7 @@ const Register = ({setIsRegistrationOpen}) => {
                        type="email"
                        placeholder="Enter your email"
                        style={ (email.isDirty && email.isEmpty || email.emailError) ? {borderBottom: "1px solid red"} : {borderBottom: "1px solid green"} }/>
-                {(email.isDirty && email.isEmpty || email.emailError) && <div className="registration__error">Please enter a valid e-mail address</div>}
+                {(email.isDirty && email.isEmpty || (email.emailError && email.isDirty)) && <div className="registration__error">Please enter a valid e-mail address</div>}
                 <input onChange={e => password.onChange(e)}
                        onBlur={e => password.onBlur(e)}
                        value={password.value}

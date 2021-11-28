@@ -2,11 +2,14 @@ import React, {useState} from 'react';
 import {useClickOutside} from "../../UI/hooks/useClickOutside";
 import facebookIcon from "../../../assets/icons/Header/MainHeader/LoginModal/facebook-icon.svg"
 import googleIcon from "../../../assets/icons/Header/MainHeader/LoginModal/google-icon.png"
-import './LoginModal.css'
 import Register from "./Register/Register";
+import {useInput} from "../../UI/hooks/useInput";
+import './LoginModal.css'
 
 
 const LoginModal = (props) => {
+    const email = useInput("", {isEmpty: true, minLength: 3, isEmail: true});
+    const password = useInput("", {isEmpty: true, minLength: 5, maxLength: 15});
     const [isRegistrationOpen, setIsRegistrationOpen] = useState(false)
 
     let domNode = useClickOutside(() => {
@@ -32,17 +35,30 @@ const LoginModal = (props) => {
                     <form>
                         <div className="login-email">
                             <label htmlFor="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email"/>
+                            <input onChange={e => email.onChange(e)}
+                                   onBlur={e => email.onBlur(e)}
+                                   value={email.value}
+                                   type="email"
+                                   placeholder="Enter your email"
+                                   style={ (email.isDirty && email.isEmpty || email.emailError) ? {borderBottom: "1px solid red"} : {borderBottom: "1px solid green"} }/>
+                            {(email.isDirty && email.isEmpty || (email.emailError && email.isDirty)) && <div className="registration__error">Please enter a valid e-mail address</div>}
                         </div>
                         <div className="login-password">
                             <div>
                                 <label htmlFor="password">Password</label>
                                 <a href="#">Lost your password?</a>
                             </div>
-                            <input type="password" id="password" name="password" placeholder="Your password"/>
+                            <input onChange={e => password.onChange(e)}
+                                   onBlur={e => password.onBlur(e)}
+                                   value={password.value}
+                                   type="password"
+                                   placeholder="Enter your password"
+                                   style={ (password.isDirty && password.isEmpty || password.minLengthError) ? {borderBottom: "1px solid red"} : {borderBottom: "1px solid green"} }/>
+                            {(password.isDirty && password.isEmpty) && <div className="registration__error">Please enter a password</div>}
+                            {(password.isDirty && password.minLengthError) && <div className="registration__error password-error">Password must be more than 5 characters</div>}
                         </div>
 
-                        <input type="submit" value="login"/>
+                        <button disabled={!email.inputValid || !password.inputValid} type="submit">login</button>
                     </form>
 
                     <div className="lines">
@@ -68,7 +84,7 @@ const LoginModal = (props) => {
                     <div className="new-user">
                         <div>New Customer?</div>
                         <a onClick={() => {
-                            setIsRegistrationOpen(true)
+                            setIsRegistrationOpen(!isRegistrationOpen)
                         }} href="#">create your account</a>
                     </div>
 

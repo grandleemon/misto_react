@@ -71,7 +71,7 @@
     background-color: #F8F8F8;
 }
 
-form input[type=submit]{
+form button[type=submit]{
     width: 100%;
     padding: 17px;
     background-color: #121212;
@@ -83,6 +83,11 @@ form input[type=submit]{
     margin-top: 39px;
     cursor: pointer;
     letter-spacing: 0.06em;
+}
+
+form button[type=submit]:disabled{
+    background-color: rgba(18, 18, 18, 0.32);
+    cursor: default;
 }
 
 .lines{
@@ -165,7 +170,7 @@ form input[type=submit]{
     display: none;
     position: absolute;
     top: 50vh;
-    transform: translate(-100%, -50%);
+    transform: translate(-120%, -50%);
     right: 50%;
     background-color: #fff;
     padding: 25px 50px;
@@ -175,9 +180,29 @@ form input[type=submit]{
 
 
 @media screen and (max-width: 479px) {
+    .registration__form{
+        left:120%;
+        width: 100%;
+        padding: 25px 25px;
+    }
     .login{
         width: 100%;
         overflow-y: scroll;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 1439px) {
+    .registration__form{
+        left: 50%;
+        width: 100%;
+        transform: translate(-100%, -50%);
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1800px){
+    .registration__form{
+        width: 100%;
+        transform: translate(-100%, -50%);
     }
 }
 

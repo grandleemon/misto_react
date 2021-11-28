@@ -42,7 +42,7 @@
     }
 }
 
-@media (min-width: 377px) and (max-width: 479px) {
+@media (min-width: 377px) and (max-width: 600px) {
     .footer__nav {
         grid-template-columns: repeat(2, 170px);
         row-gap: 30px;
@@ -55,7 +55,7 @@
     }
 }
 
-@media ( min-width: 480px ) and ( max-width: 768px ){
+@media ( min-width: 601px ) and ( max-width: 768px ){
     .footer__nav {
         grid-template-columns: repeat(2, 300px);
         row-gap: 30px;
